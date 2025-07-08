@@ -34,17 +34,23 @@ exlm은 도메인 특화 LLM을 자동으로 생성하고 배포할 수 있는 �
 
 ## ⚡ 빠른 시작
 
-### RunPod에서 1분 배포
+### RunPod 원클릭 배포 (권장) ⭐
+
+GPU 환경에서 **1분 만에** 완전 자동 설치가 가능합니다.
 
 ```bash
-# 소스코드가 이미 있는 경우
-cd /workspace/exlm-app && ./scripts/setup-runpod-local.sh && ./start-all.sh
-
-# 처음부터 시작하는 경우
-curl -sSL https://raw.githubusercontent.com/quantumaikr/exlm-app/main/scripts/deploy-runpod-native.sh -o deploy.sh && chmod +x deploy.sh && ./deploy.sh
+# RunPod SSH 접속 후 한 번의 명령어로 완료
+curl -sSL https://raw.githubusercontent.com/quantumaikr/exlm-app/main/scripts/runpod-full-setup.sh | bash
 ```
 
-**접속**: `http://YOUR_RUNPOD_IP:3000`
+- ✅ **완전 자동화**: 시스템 설정부터 서비스 시작까지 모든 과정 자동
+- ✅ **GPU 자동 감지**: CUDA 환경 자동 구성
+- ✅ **즉시 사용 가능**: 설치 완료 후 바로 웹 UI 접속 가능
+
+**포트 설정**: RunPod 콘솔에서 3000, 8000 포트를 Public으로 설정
+**접속**: `https://[POD_ID]-3000.proxy.runpod.net`
+
+📚 **상세 가이드**: [RunPod 빠른 설치 가이드](docs/RUNPOD_QUICK_SETUP.md)
 
 ## 📋 요구사항
 
@@ -169,7 +175,8 @@ npm run dev
 
 ## 📚 문서
 
-- [⚡ 빠른 시작 가이드](docs/QUICK_START.md) - **추천**
+- [🚀 RunPod 빠른 설치 가이드](docs/RUNPOD_QUICK_SETUP.md) - **추천**
+- [⚡ 빠른 시작 가이드](docs/QUICK_START.md) - 배포 방법 비교
 - [RunPod 네이티브 배포 가이드](docs/RUNPOD_NATIVE_DEPLOYMENT.md)
 - [Docker 배포 가이드](docs/RUNPOD_DEPLOYMENT.md)
 - [GitHub Token 가이드](docs/GITHUB_TOKEN_GUIDE.md)
