@@ -23,15 +23,15 @@ pydantic-settings==0.2.5  # pydantic 1.x 호환 버전
 email-validator==2.1.0
 
 # ML/AI (GPU enabled)
-transformers>=4.36.0,<4.38.0  # vLLM 호환성을 위해 버전 범위 설정
+transformers==4.36.2  # 정확한 버전으로 고정
 # torch==2.1.1+cu118  # PyTorch는 별도 인덱스에서 설치: pip install torch==2.1.1 torchvision==0.16.1 torchaudio==2.1.1 --index-url https://download.pytorch.org/whl/cu118
-accelerate>=0.24.1,<0.26.0
-peft>=0.6.2,<0.8.0
-trl>=0.7.4,<0.9.0
-datasets>=2.15.0,<2.17.0
-tokenizers>=0.15.0,<0.16.0
+accelerate==0.25.0  # 정확한 버전으로 고정
+peft==0.7.1  # 정확한 버전으로 고정
+trl==0.7.11  # 정확한 버전으로 고정
+datasets==2.16.1  # 정확한 버전으로 고정
+tokenizers==0.15.0  # 정확한 버전으로 고정
 sentencepiece==0.1.99
-bitsandbytes>=0.41.2,<0.42.0
+bitsandbytes==0.41.2  # 정확한 버전으로 고정
 
 # Training & Evaluation
 tensorboard==2.15.1
@@ -57,7 +57,6 @@ flower==2.0.1
 # Utils
 httpx==0.25.2
 aiofiles==23.2.1
-python-multipart==0.0.6
 Jinja2==3.1.2
 loguru==0.7.2
 psutil==5.9.6
@@ -75,6 +74,6 @@ pytest-asyncio==0.21.1
 pytest-cov==4.1.0
 
 # Serving (GPU enabled)
-ray>=2.8.0,<2.10.0
-vllm>=0.2.5,<0.3.0  # 호환성 확인된 버전 범위
-aiohttp>=3.9.1,<3.10.0 
+ray==2.8.1  # 정확한 버전으로 고정
+vllm==0.2.7  # 정확한 버전으로 고정
+aiohttp==3.9.1  # 정확한 버전으로 고정 

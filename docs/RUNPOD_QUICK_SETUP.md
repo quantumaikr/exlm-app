@@ -256,8 +256,8 @@ pip uninstall -y transformers peft trl vllm accelerate pydantic fastapi openai a
 pip install "pydantic==1.10.13"
 pip install "pydantic-settings==0.2.5"
 pip install "fastapi==0.100.1"
-pip install "transformers>=4.36.0,<4.38.0"
-pip install "vllm>=0.2.5,<0.3.0"
+pip install "transformers==4.36.2"
+pip install "vllm==0.2.7"
 pip install -r requirements-gpu.txt
 ```
 

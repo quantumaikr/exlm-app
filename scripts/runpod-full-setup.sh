@@ -205,10 +205,10 @@ if [ "$GPU_AVAILABLE" = true ]; then
     
     # 핵심 의존성 먼저 설치
     print_status "핵심 라이브러리 설치 중..."
-    pip install "pydantic==1.10.13" "pydantic-settings==1.2.2" "fastapi==0.100.1" -q
+    pip install "pydantic==1.10.13" "pydantic-settings==0.2.5" "fastapi==0.100.1" -q
     
     print_status "ML 라이브러리 설치 중..."
-    pip install transformers accelerate tokenizers datasets -q
+    pip install "transformers==4.36.2" "accelerate==0.25.0" "tokenizers==0.15.0" "datasets==2.16.1" -q
     
     # 나머지 GPU requirements 설치
     print_status "GPU 전용 라이브러리 설치 중..."
@@ -216,10 +216,10 @@ if [ "$GPU_AVAILABLE" = true ]; then
 else
     print_status "CPU requirements 설치 중..."
     # 핵심 의존성 먼저 설치
-    pip install "pydantic==1.10.13" "pydantic-settings==1.2.2" "fastapi==0.100.1" -q
+    pip install "pydantic==1.10.13" "pydantic-settings==0.2.5" "fastapi==0.100.1" -q
     
     print_status "ML 라이브러리 설치 중..."
-    pip install transformers accelerate tokenizers datasets -q
+    pip install "transformers==4.36.2" "accelerate==0.25.0" "tokenizers==0.15.0" "datasets==2.16.1" -q
     
     # 나머지 requirements 설치
     pip install -r requirements.txt -q

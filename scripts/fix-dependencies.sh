@@ -81,28 +81,28 @@ if [ "$GPU_AVAILABLE" = true ]; then
     pip install "fastapi==0.100.1" -q
     
     print_status "Transformers 라이브러리 설치 중..."
-    pip install "transformers>=4.36.0,<4.38.0" -q
+    pip install "transformers==4.36.2" -q
     
     print_status "Accelerate 설치 중..."
-    pip install "accelerate>=0.24.1,<0.26.0" -q
+    pip install "accelerate==0.25.0" -q
     
     print_status "Tokenizers 설치 중..."
-    pip install "tokenizers>=0.15.0,<0.16.0" -q
+    pip install "tokenizers==0.15.0" -q
     
     print_status "Datasets 설치 중..."
-    pip install "datasets>=2.15.0,<2.17.0" -q
+    pip install "datasets==2.16.1" -q
     
     print_status "PEFT 설치 중..."
-    pip install "peft>=0.6.2,<0.8.0" -q
+    pip install "peft==0.7.1" -q
     
     print_status "TRL 설치 중..."
-    pip install "trl>=0.7.4,<0.9.0" -q
+    pip install "trl==0.7.11" -q
     
     print_status "Bitsandbytes 설치 중..."
-    pip install "bitsandbytes>=0.41.2,<0.42.0" -q
+    pip install "bitsandbytes==0.41.2" -q
     
     print_status "vLLM 설치 중..."
-    pip install "vllm>=0.2.5,<0.3.0" -q
+    pip install "vllm==0.2.7" -q
     
     print_status "나머지 의존성 설치 중..."
     pip install -r requirements-gpu.txt -q
@@ -121,7 +121,7 @@ else
     pip install "fastapi==0.100.1" -q
     
     print_status "Transformers 라이브러리 설치 중..."
-    pip install "transformers>=4.36.0,<4.38.0" -q
+    pip install "transformers==4.36.2" -q
     
     print_status "PyTorch CPU 버전 설치 중..."
     pip install torch torchvision torchaudio --index-url https://download.pytorch.org/whl/cpu -q
