@@ -32,36 +32,90 @@ exlm은 도메인 특화 LLM을 자동으로 생성하고 배포할 수 있는 �
 - **OpenAI API 호환**: 기존 애플리케이션과 쉽게 통합
 - **자동 스케일링**: 트래픽에 따른 자동 확장
 
+## ⚡ 빠른 시작
+
+### RunPod에서 1분 배포
+
+```bash
+# 소스코드가 이미 있는 경우
+cd /workspace/exlm-app && ./scripts/setup-runpod-local.sh && ./start-all.sh
+
+# 처음부터 시작하는 경우
+curl -sSL https://raw.githubusercontent.com/quantumaikr/exlm-app/main/scripts/deploy-runpod-native.sh -o deploy.sh && chmod +x deploy.sh && ./deploy.sh
+```
+
+**접속**: `http://YOUR_RUNPOD_IP:3000`
+
 ## 📋 요구사항
 
 - Python 3.9+
 - Node.js 18+
-- Docker & Docker Compose
+- Docker & Docker Compose (선택사항)
 - CUDA 11.8+ (GPU 학습 시)
 
 ## 🛠️ 설치 방법
 
-### 1. 저장소 클론
+### 방법 1: RunPod 배포 (권장) ⭐
+
+GPU 환경에서 빠른 배포를 원한다면 RunPod을 사용하세요:
+
+#### 소스코드가 이미 있는 경우 (가장 간단)
 
 ```bash
-git clone https://github.com/yourusername/exlm.git
-cd exlm
+# EXLM 프로젝트 디렉토리에서 실행
+cd /workspace/exlm-app
+chmod +x scripts/setup-runpod-local.sh
+./scripts/setup-runpod-local.sh
+
+# 서비스 시작
+./start-all.sh
 ```
 
-### 2. 환경 변수 설정
+#### 처음부터 설치하는 경우
+
+```bash
+# 자동 배포 스크립트 다운로드
+curl -sSL https://raw.githubusercontent.com/quantumaikr/exlm-app/main/scripts/deploy-runpod-native.sh -o deploy.sh
+chmod +x deploy.sh
+
+# 토큰과 함께 배포 (권장)
+./deploy.sh YOUR_GITHUB_TOKEN
+
+# 또는 토큰 없이 배포 (Public 저장소인 경우)
+./deploy.sh
+```
+
+**RunPod 포트 설정**: 3000, 8000, 5555 포트를 Public으로 설정하세요.
+
+📚 **상세 가이드**: [RunPod 네이티브 배포 가이드](docs/RUNPOD_NATIVE_DEPLOYMENT.md)
+
+### 방법 2: Docker 환경 (로컬/서버)
+
+#### 1. 저장소 클론
+
+```bash
+git clone https://github.com/quantumaikr/exlm-app.git
+cd exlm-app
+```
+
+#### 2. 환경 변수 설정
 
 ```bash
 cp .env.example .env
 # .env 파일을 열어 필요한 API 키와 설정을 입력하세요
 ```
 
-### 3. Docker Compose로 실행
+#### 3. Docker Compose로 실행
 
 ```bash
+# 개발 환경 (CPU)
 docker-compose up -d
+
+# GPU 환경
+docker-compose -f docker-compose.gpu.yml up -d
 ```
 
-### 4. 개발 환경 설정
+### 방법 3: 개발 환경 설정 (로컬)
 
 #### Backend (Python/FastAPI)
 
@@ -113,11 +167,15 @@ npm run dev
 
 이 프로젝트는 MIT 라이선스 하에 배포됩니다. 자세한 내용은 [LICENSE](LICENSE) 파일을 참고하세요.
 
-## 🔗 링크
+## 📚 문서
 
-- [문서](https://docs.exlm.io)
-- [API 레퍼런스](https://api.exlm.io/docs)
-- [예제 노트북](https://github.com/yourusername/exlm/tree/main/examples)
+- [⚡ 빠른 시작 가이드](docs/QUICK_START.md) - **추천**
+- [RunPod 네이티브 배포 가이드](docs/RUNPOD_NATIVE_DEPLOYMENT.md)
+- [Docker 배포 가이드](docs/RUNPOD_DEPLOYMENT.md)
+- [GitHub Token 가이드](docs/GITHUB_TOKEN_GUIDE.md)
+- [환경 설정 가이드](docs/ENVIRONMENT_SETUP.md)
+- [프로젝트 구조](docs/PROJECT_STRUCTURE.md)
+- [모니터링 설정](docs/monitoring.md)
 
 ## 💬 지원
 

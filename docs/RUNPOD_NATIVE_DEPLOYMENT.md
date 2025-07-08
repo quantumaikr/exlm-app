@@ -4,22 +4,50 @@ Docker를 사용할 수 없는 RunPod 환경에서 EXLM 플랫폼을 직접 설�
 
 ## 🚀 자동 배포 (권장)
 
-### 1. GitHub Personal Access Token 준비
+### 방법 1: 소스코드가 이미 있는 경우 (가장 간단) ⭐
+
+이미 `git pull` 또는 다른 방법으로 소스코드를 가져온 경우:
+
+```bash
+# EXLM 프로젝트 루트 디렉토리에서 실행
+cd /path/to/exlm-app
+chmod +x scripts/setup-runpod-local.sh
+./scripts/setup-runpod-local.sh
+
+# 또는 스크립트 직접 다운로드
+curl -sSL https://raw.githubusercontent.com/quantumaikr/exlm-app/main/scripts/setup-runpod-local.sh -o setup.sh
+chmod +x setup.sh
+./setup.sh
+```
+
+**장점:**
+
+- ✅ GitHub Token 불필요
+- ⚡ 저장소 클론 과정 생략으로 빠른 설치
+- 🛠️ 자동 서비스 관리 스크립트 생성
+
+### 방법 2: 저장소부터 새로 시작하는 경우
+
+#### 2-1. GitHub Personal Access Token 준비 (선택사항)
 
 1. GitHub → Settings → Developer settings → Personal access tokens → Tokens (classic)
 2. "Generate new token" 클릭
 3. 권한: `repo`, `read:org` 선택
 4. 토큰 복사
 
-### 2. 자동 배포 스크립트 실행
+#### 2-2. 자동 배포 스크립트 실행
 
 ```bash
 # 스크립트 다운로드
 curl -sSL https://raw.githubusercontent.com/quantumaikr/exlm-app/main/scripts/deploy-runpod-native.sh -o deploy-runpod-native.sh
 chmod +x deploy-runpod-native.sh
 
-# 배포 실행
+# 토큰과 함께 배포 (권장)
 ./deploy-runpod-native.sh YOUR_GITHUB_TOKEN
+
+# 또는 토큰 없이 배포 (Public 저장소인 경우)
+./deploy-runpod-native.sh
+# 프롬프트에서 'y' 입력하여 계속 진행
 ```
 
 ## 📋 수동 배포 과정
@@ -146,7 +174,27 @@ nohup celery -A app.core.celery_app flower --port=5555 > ../logs/flower.log 2>&1
 
 ## 🛠️ 관리 명령어
 
-### 서비스 상태 확인
+### 자동 생성된 스크립트 사용 (권장) ⭐
+
+로컬 설치 스크립트를 사용한 경우, 편리한 관리 스크립트들이 자동 생성됩니다:
+
+```bash
+# 모든 서비스 한 번에 시작
+./start-all.sh
+
+# 개별 서비스 시작
+./start-backend.sh    # 백엔드만
+./start-frontend.sh   # 프론트엔드만
+./start-celery.sh     # Celery 워커만
+./start-flower.sh     # Flower만
+
+# 모든 서비스 중지
+./stop-all.sh
+```
+
+### 수동 서비스 관리
+
+#### 서비스 상태 확인
 
 ```bash
 # 실행 중인 프로세스 확인
@@ -156,7 +204,7 @@ ps aux | grep -E "(uvicorn|npm|celery)" | grep -v grep
 netstat -tulpn | grep -E ':(3000|8000|5555)'
 ```
 
-### 로그 확인
+#### 로그 확인
 
 ```bash
 # 백엔드 로그
@@ -172,7 +220,7 @@ tail -f logs/celery.log
 tail -f logs/flower.log
 ```
 
-### 서비스 재시작
+#### 서비스 재시작
 
 ```bash
 # 모든 서비스 중지
