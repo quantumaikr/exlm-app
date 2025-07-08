@@ -402,6 +402,15 @@ sudo rm -f /usr/lib/python3/dist-packages/apt_pkg.cpython-*.so
 sudo ln -sf /usr/lib/python3/dist-packages/apt_pkg.cpython-310-x86_64-linux-gnu.so /usr/lib/python3/dist-packages/apt_pkg.cpython-311-x86_64-linux-gnu.so
 ```
 
+#### PyYAML 빌드 오류
+
+```bash
+# PyYAML 빌드 오류 발생 시
+cd backend
+chmod +x ../scripts/fix-pyyaml.sh
+../scripts/fix-pyyaml.sh
+```
+
 #### 의존성 충돌 오류
 
 ```bash

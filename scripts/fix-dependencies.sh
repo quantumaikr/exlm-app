@@ -71,6 +71,9 @@ if [ "$GPU_AVAILABLE" = true ]; then
     pip install torch==2.1.1 torchvision==0.16.1 torchaudio==2.1.1 --index-url https://download.pytorch.org/whl/cu118 -q
     
     # 핵심 라이브러리 단계별 설치
+    print_status "PyYAML 설치 중 (Python 3.11 호환 버전)..."
+    pip install "PyYAML==6.0.1" --no-build-isolation -q
+    
     print_status "Pydantic 설치 중 (vLLM 호환 버전)..."
     pip install "pydantic==1.10.13" -q
     
@@ -111,6 +114,9 @@ else
     print_status "CPU 환경 의존성 재설치 중..."
     
     # 핵심 라이브러리 단계별 설치
+    print_status "PyYAML 설치 중 (Python 3.11 호환 버전)..."
+    pip install "PyYAML==6.0.1" --no-build-isolation -q
+    
     print_status "Pydantic 설치 중 (vLLM 호환 버전)..."
     pip install "pydantic==1.10.13" -q
     

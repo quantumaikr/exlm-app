@@ -205,6 +205,7 @@ if [ "$GPU_AVAILABLE" = true ]; then
     
     # 핵심 의존성 먼저 설치
     print_status "핵심 라이브러리 설치 중..."
+    pip install "PyYAML==6.0.1" --no-build-isolation -q  # Python 3.11 호환 버전 먼저 설치
     pip install "pydantic==1.10.13" "pydantic-settings==0.2.5" "fastapi==0.100.1" -q
     
     print_status "ML 라이브러리 설치 중..."
@@ -216,6 +217,7 @@ if [ "$GPU_AVAILABLE" = true ]; then
 else
     print_status "CPU requirements 설치 중..."
     # 핵심 의존성 먼저 설치
+    pip install "PyYAML==6.0.1" --no-build-isolation -q  # Python 3.11 호환 버전 먼저 설치
     pip install "pydantic==1.10.13" "pydantic-settings==0.2.5" "fastapi==0.100.1" -q
     
     print_status "ML 라이브러리 설치 중..."
