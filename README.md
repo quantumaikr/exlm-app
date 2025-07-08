@@ -175,7 +175,8 @@ npm run dev
 
 ## 📚 문서
 
-- [🚀 RunPod 빠른 설치 가이드](docs/RUNPOD_QUICK_SETUP.md) - **추천**
+- [🚀 RunPod 5분 빠른 시작](docs/RUNPOD_QUICK_START.md) - **추천**
+- [📖 RunPod 설치 완전 가이드](docs/RUNPOD_INSTALLATION_GUIDE.md) - 상세 가이드
 - [⚡ 빠른 시작 가이드](docs/QUICK_START.md) - 배포 방법 비교
 - [RunPod 네이티브 배포 가이드](docs/RUNPOD_NATIVE_DEPLOYMENT.md)
 - [Docker 배포 가이드](docs/RUNPOD_DEPLOYMENT.md)
