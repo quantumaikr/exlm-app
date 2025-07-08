@@ -77,8 +77,8 @@ apt install -y -qq \
     openssl unzip vim nano htop net-tools \
     python3-pip python3-dev python3-venv
 
-# 4. Python 3.11 설치
-print_status "Python 3.11 설치 중..."
+# 4. Python 설치 (3.10 또는 3.11)
+print_status "Python 설치 중..."
 
 # apt_pkg 모듈 문제 해결
 print_status "apt_pkg 모듈 문제 해결 중..."
@@ -93,14 +93,20 @@ if add-apt-repository ppa:deadsnakes/ppa -y; then
     # apt 업데이트
     apt update -qq || print_warning "apt update 실패"
     
-    # Python 3.11 설치
-    if apt install -y -qq python3.11 python3.11-venv python3.11-dev python3.11-distutils; then
+    # Python 3.10 먼저 시도 (더 안정적)
+    if apt install -y -qq python3.10 python3.10-venv python3.10-dev python3.10-distutils; then
+        # Python 3.10을 기본으로 설정
+        update-alternatives --install /usr/bin/python3 python3 /usr/bin/python3.10 1 2>/dev/null || true
+        update-alternatives --install /usr/bin/pip3 pip3 /usr/bin/pip3 1 2>/dev/null || true
+        print_success "Python 3.10 설치 완료: $(python3 --version)"
+    # Python 3.10 실패 시 3.11 시도
+    elif apt install -y -qq python3.11 python3.11-venv python3.11-dev python3.11-distutils; then
         # Python 3.11을 기본으로 설정
         update-alternatives --install /usr/bin/python3 python3 /usr/bin/python3.11 1 2>/dev/null || true
         update-alternatives --install /usr/bin/pip3 pip3 /usr/bin/pip3 1 2>/dev/null || true
         print_success "Python 3.11 설치 완료: $(python3 --version)"
     else
-        print_warning "Python 3.11 설치 실패, 기본 Python 사용"
+        print_warning "Python 3.10/3.11 설치 실패, 기본 Python 사용"
         # 기본 Python 버전 확인
         python3 --version || print_error "Python 설치 실패"
     fi
@@ -205,7 +211,7 @@ if [ "$GPU_AVAILABLE" = true ]; then
     
     # 핵심 의존성 먼저 설치
     print_status "핵심 라이브러리 설치 중..."
-    pip install "PyYAML==6.0.1" --no-build-isolation -q  # Python 3.11 호환 버전 먼저 설치
+    pip install "PyYAML==5.4.1" -q  # Python 3.11 안정 버전 먼저 설치
     pip install "pydantic==1.10.13" "pydantic-settings==0.2.5" "fastapi==0.100.1" -q
     
     print_status "ML 라이브러리 설치 중..."
@@ -217,7 +223,7 @@ if [ "$GPU_AVAILABLE" = true ]; then
 else
     print_status "CPU requirements 설치 중..."
     # 핵심 의존성 먼저 설치
-    pip install "PyYAML==6.0.1" --no-build-isolation -q  # Python 3.11 호환 버전 먼저 설치
+    pip install "PyYAML==5.4.1" -q  # Python 3.11 안정 버전 먼저 설치
     pip install "pydantic==1.10.13" "pydantic-settings==0.2.5" "fastapi==0.100.1" -q
     
     print_status "ML 라이브러리 설치 중..."

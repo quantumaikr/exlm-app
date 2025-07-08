@@ -59,7 +59,7 @@ aiofiles==23.2.1
 Jinja2==3.1.2
 loguru==0.7.2
 psutil==5.9.6
-PyYAML==6.0.1  # Python 3.11 호환 버전
+PyYAML==5.4.1  # Python 3.11 안정 버전
 
 # Quality Filtering
 scikit-learn==1.3.2

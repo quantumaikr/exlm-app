@@ -54,9 +54,9 @@ pip uninstall -y PyYAML 2>/dev/null || true
 print_status "pip 업그레이드 중..."
 pip install --upgrade pip setuptools wheel build -q
 
-# 방법 1: --no-build-isolation 옵션으로 설치
-print_status "방법 1: --no-build-isolation 옵션으로 PyYAML 설치 시도..."
-if pip install "PyYAML==6.0.1" --no-build-isolation -q; then
+# 방법 1: 안정 버전으로 설치
+print_status "방법 1: 안정 버전으로 PyYAML 설치 시도..."
+if pip install "PyYAML==5.4.1" -q; then
     print_success "PyYAML 설치 성공!"
     exit 0
 else
@@ -72,10 +72,10 @@ else
     print_warning "방법 2 실패, 방법 3 시도..."
 fi
 
-# 방법 3: 이전 버전으로 설치
-print_status "방법 3: 이전 버전으로 PyYAML 설치 시도..."
-if pip install "PyYAML==5.4.1" -q; then
-    print_success "PyYAML 5.4.1 설치 성공!"
+# 방법 3: 더 이전 버전으로 설치
+print_status "방법 3: 더 이전 버전으로 PyYAML 설치 시도..."
+if pip install "PyYAML==5.3.1" -q; then
+    print_success "PyYAML 5.3.1 설치 성공!"
     exit 0
 else
     print_warning "방법 3 실패, 방법 4 시도..."
@@ -83,7 +83,7 @@ fi
 
 # 방법 4: 소스에서 빌드
 print_status "방법 4: 소스에서 PyYAML 빌드 시도..."
-pip install "PyYAML==6.0.1" --no-binary :all: -q
+pip install "PyYAML==5.4.1" --no-binary :all: -q
 
 print_success "PyYAML 설치 완료!"
 

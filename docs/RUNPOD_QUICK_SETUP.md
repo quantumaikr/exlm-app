@@ -252,7 +252,7 @@ chmod +x ../scripts/fix-pyyaml.sh
 
 # 수동으로 해결하는 경우
 source venv/bin/activate
-pip install "PyYAML==6.0.1" --no-build-isolation
+pip install "PyYAML==5.4.1"
 ```
 
 #### 7. 의존성 충돌 문제
