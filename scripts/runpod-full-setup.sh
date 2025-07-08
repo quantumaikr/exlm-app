@@ -54,8 +54,20 @@ fi
 # 2. 시스템 업데이트
 print_status "시스템 업데이트 중..."
 export DEBIAN_FRONTEND=noninteractive
-apt update -qq
-apt upgrade -y -qq
+
+# apt 업데이트 재시도 로직
+for i in {1..3}; do
+    if apt update -qq; then
+        break
+    else
+        print_warning "apt update 실패, 재시도 중... ($i/3)"
+        sleep 2
+    fi
+done
+
+# 시스템 업그레이드 (선택사항, 시간이 오래 걸릴 수 있음)
+print_status "시스템 업그레이드 중..."
+apt upgrade -y -qq || print_warning "시스템 업그레이드 실패, 계속 진행..."
 
 # 3. 필수 의존성 설치
 print_status "필수 의존성 설치 중..."
@@ -67,48 +79,79 @@ apt install -y -qq \
 
 # 4. Python 3.11 설치
 print_status "Python 3.11 설치 중..."
-add-apt-repository ppa:deadsnakes/ppa -y -qq
-apt update -qq
-apt install -y -qq python3.11 python3.11-venv python3.11-dev python3.11-distutils
 
-# Python 3.11을 기본으로 설정
-update-alternatives --install /usr/bin/python3 python3 /usr/bin/python3.11 1
-update-alternatives --install /usr/bin/pip3 pip3 /usr/bin/pip3 1
+# PPA 추가
+add-apt-repository ppa:deadsnakes/ppa -y || print_warning "PPA 추가 실패, 기본 Python 사용"
 
-print_success "Python 설치 완료: $(python3 --version)"
+# apt 업데이트
+apt update -qq || print_warning "apt update 실패"
+
+# Python 3.11 설치
+if apt install -y -qq python3.11 python3.11-venv python3.11-dev python3.11-distutils; then
+    # Python 3.11을 기본으로 설정
+    update-alternatives --install /usr/bin/python3 python3 /usr/bin/python3.11 1 2>/dev/null || true
+    update-alternatives --install /usr/bin/pip3 pip3 /usr/bin/pip3 1 2>/dev/null || true
+    print_success "Python 3.11 설치 완료: $(python3 --version)"
+else
+    print_warning "Python 3.11 설치 실패, 기본 Python 사용"
+    # 기본 Python 버전 확인
+    python3 --version || print_error "Python 설치 실패"
+fi
 
 # 5. Node.js 18 설치
 print_status "Node.js 18 설치 중..."
-curl -fsSL https://deb.nodesource.com/setup_18.x | bash - > /dev/null 2>&1
-apt install -y -qq nodejs
 
-print_success "Node.js 설치 완료: $(node --version), npm: $(npm --version)"
+# NodeSource 저장소 추가
+if curl -fsSL https://deb.nodesource.com/setup_18.x | bash - > /dev/null 2>&1; then
+    apt update -qq || print_warning "apt update 실패"
+    
+    if apt install -y -qq nodejs; then
+        print_success "Node.js 설치 완료: $(node --version), npm: $(npm --version)"
+    else
+        print_warning "Node.js 설치 실패, 기본 Node.js 사용"
+        # 기본 Node.js 버전 확인
+        node --version || print_error "Node.js 설치 실패"
+    fi
+else
+    print_warning "NodeSource 저장소 추가 실패, 기본 Node.js 사용"
+    # 기본 Node.js 버전 확인
+    node --version || print_error "Node.js 설치 실패"
+fi
 
 # 6. PostgreSQL 설치 및 설정
 print_status "PostgreSQL 설치 및 설정 중..."
-apt install -y -qq postgresql postgresql-contrib
 
-# PostgreSQL 서비스 시작
-systemctl start postgresql
-systemctl enable postgresql
-
-# 데이터베이스 설정
-sudo -u postgres psql -c "CREATE USER exlm_user WITH PASSWORD 'exlm_password';" 2>/dev/null || true
-sudo -u postgres psql -c "CREATE DATABASE exlm_db OWNER exlm_user;" 2>/dev/null || true
-sudo -u postgres psql -c "GRANT ALL PRIVILEGES ON DATABASE exlm_db TO exlm_user;" 2>/dev/null || true
-sudo -u postgres psql -c "ALTER USER exlm_user CREATEDB;" 2>/dev/null || true
-
-print_success "PostgreSQL 설정 완료"
+if apt install -y -qq postgresql postgresql-contrib; then
+    # PostgreSQL 서비스 시작
+    systemctl start postgresql || print_warning "PostgreSQL 서비스 시작 실패"
+    systemctl enable postgresql || print_warning "PostgreSQL 서비스 자동 시작 설정 실패"
+    
+    # 데이터베이스 설정
+    print_status "데이터베이스 설정 중..."
+    sudo -u postgres psql -c "CREATE USER exlm_user WITH PASSWORD 'exlm_password';" 2>/dev/null || print_warning "사용자 생성 실패 (이미 존재할 수 있음)"
+    sudo -u postgres psql -c "CREATE DATABASE exlm_db OWNER exlm_user;" 2>/dev/null || print_warning "데이터베이스 생성 실패 (이미 존재할 수 있음)"
+    sudo -u postgres psql -c "GRANT ALL PRIVILEGES ON DATABASE exlm_db TO exlm_user;" 2>/dev/null || print_warning "권한 부여 실패"
+    sudo -u postgres psql -c "ALTER USER exlm_user CREATEDB;" 2>/dev/null || print_warning "사용자 권한 변경 실패"
+    
+    print_success "PostgreSQL 설정 완료"
+else
+    print_error "PostgreSQL 설치 실패"
+    exit 1
+fi
 
 # 7. Redis 설치 및 설정
 print_status "Redis 설치 및 설정 중..."
-apt install -y -qq redis-server
 
-# Redis 서비스 시작
-systemctl start redis-server
-systemctl enable redis-server
-
-print_success "Redis 설정 완료"
+if apt install -y -qq redis-server; then
+    # Redis 서비스 시작
+    systemctl start redis-server || print_warning "Redis 서비스 시작 실패"
+    systemctl enable redis-server || print_warning "Redis 서비스 자동 시작 설정 실패"
+    
+    print_success "Redis 설정 완료"
+else
+    print_error "Redis 설치 실패"
+    exit 1
+fi
 
 # 8. EXLM 프로젝트 클론
 print_status "EXLM 프로젝트 클론 중..."
