@@ -388,6 +388,29 @@ exlm/
 
 ## 🚨 문제 해결
 
+### RunPod 특화 문제
+
+#### apt_pkg 모듈 오류
+
+```bash
+# add-apt-repository 오류 발생 시
+chmod +x scripts/fix-apt-pkg.sh
+./scripts/fix-apt-pkg.sh
+
+# 수동으로 해결하는 경우
+sudo rm -f /usr/lib/python3/dist-packages/apt_pkg.cpython-*.so
+sudo ln -sf /usr/lib/python3/dist-packages/apt_pkg.cpython-310-x86_64-linux-gnu.so /usr/lib/python3/dist-packages/apt_pkg.cpython-311-x86_64-linux-gnu.so
+```
+
+#### 의존성 충돌 오류
+
+```bash
+# 의존성 충돌 오류 발생 시
+cd backend
+chmod +x ../scripts/fix-dependencies.sh
+../scripts/fix-dependencies.sh
+```
+
 ### 일반적인 문제들
 
 1. **PostgreSQL 연결 오류**

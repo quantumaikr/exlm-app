@@ -80,23 +80,40 @@ apt install -y -qq \
 # 4. Python 3.11 설치
 print_status "Python 3.11 설치 중..."
 
-# PPA 추가
-add-apt-repository ppa:deadsnakes/ppa -y || print_warning "PPA 추가 실패, 기본 Python 사용"
+# apt_pkg 모듈 문제 해결
+print_status "apt_pkg 모듈 문제 해결 중..."
+# 기존 심볼릭 링크 제거
+rm -f /usr/lib/python3/dist-packages/apt_pkg.cpython-*.so 2>/dev/null || true
+# 새로운 심볼릭 링크 생성
+PYTHON_VERSION=$(python3 -c "import sys; print(f'{sys.version_info.major}{sys.version_info.minor}')")
+find /usr/lib/python3/dist-packages/ -name "apt_pkg.cpython-*.so" | head -1 | xargs -I {} ln -sf {} /usr/lib/python3/dist-packages/apt_pkg.cpython-${PYTHON_VERSION}*-x86_64-linux-gnu.so 2>/dev/null || true
 
-# apt 업데이트
-apt update -qq || print_warning "apt update 실패"
-
-# Python 3.11 설치
-if apt install -y -qq python3.11 python3.11-venv python3.11-dev python3.11-distutils; then
-    # Python 3.11을 기본으로 설정
-    update-alternatives --install /usr/bin/python3 python3 /usr/bin/python3.11 1 2>/dev/null || true
-    update-alternatives --install /usr/bin/pip3 pip3 /usr/bin/pip3 1 2>/dev/null || true
-    print_success "Python 3.11 설치 완료: $(python3 --version)"
+# PPA 추가 (apt_pkg 문제 해결 후)
+if add-apt-repository ppa:deadsnakes/ppa -y; then
+    # apt 업데이트
+    apt update -qq || print_warning "apt update 실패"
+    
+    # Python 3.11 설치
+    if apt install -y -qq python3.11 python3.11-venv python3.11-dev python3.11-distutils; then
+        # Python 3.11을 기본으로 설정
+        update-alternatives --install /usr/bin/python3 python3 /usr/bin/python3.11 1 2>/dev/null || true
+        update-alternatives --install /usr/bin/pip3 pip3 /usr/bin/pip3 1 2>/dev/null || true
+        print_success "Python 3.11 설치 완료: $(python3 --version)"
+    else
+        print_warning "Python 3.11 설치 실패, 기본 Python 사용"
+        # 기본 Python 버전 확인
+        python3 --version || print_error "Python 설치 실패"
+    fi
 else
-    print_warning "Python 3.11 설치 실패, 기본 Python 사용"
+    print_warning "PPA 추가 실패, 기본 Python 사용"
     # 기본 Python 버전 확인
     python3 --version || print_error "Python 설치 실패"
 fi
+
+# Python 버전 확인 및 pip 업그레이드
+print_status "Python 환경 확인 중..."
+python3 --version
+pip3 --version || print_warning "pip3 설치 필요"
 
 # 5. Node.js 18 설치
 print_status "Node.js 18 설치 중..."

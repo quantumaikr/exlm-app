@@ -230,7 +230,19 @@ systemctl status redis-server
 redis-cli ping
 ```
 
-#### 5. 의존성 충돌 문제
+#### 5. apt_pkg 모듈 오류
+
+```bash
+# add-apt-repository 오류 발생 시
+chmod +x scripts/fix-apt-pkg.sh
+./scripts/fix-apt-pkg.sh
+
+# 수동으로 해결하는 경우
+sudo rm -f /usr/lib/python3/dist-packages/apt_pkg.cpython-*.so
+sudo ln -sf /usr/lib/python3/dist-packages/apt_pkg.cpython-310-x86_64-linux-gnu.so /usr/lib/python3/dist-packages/apt_pkg.cpython-311-x86_64-linux-gnu.so
+```
+
+#### 6. 의존성 충돌 문제
 
 ```bash
 # 의존성 충돌 오류 발생 시 (transformers, vllm 등)
