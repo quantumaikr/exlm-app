@@ -75,7 +75,7 @@ if [ "$GPU_AVAILABLE" = true ]; then
     pip install "pydantic==1.10.13" -q
     
     print_status "Pydantic-settings 설치 중..."
-    pip install "pydantic-settings==1.2.2" -q
+    pip install "pydantic-settings==0.2.5" -q
     
     print_status "FastAPI 설치 중..."
     pip install "fastapi==0.100.1" -q
@@ -115,7 +115,7 @@ else
     pip install "pydantic==1.10.13" -q
     
     print_status "Pydantic-settings 설치 중..."
-    pip install "pydantic-settings==1.2.2" -q
+    pip install "pydantic-settings==0.2.5" -q
     
     print_status "FastAPI 설치 중..."
     pip install "fastapi==0.100.1" -q

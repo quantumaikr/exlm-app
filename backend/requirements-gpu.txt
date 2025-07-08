@@ -19,7 +19,7 @@ aioredis==2.0.1
 
 # Validation
 pydantic==1.10.13  # vLLM 호환성을 위해 정확한 버전 사용
-pydantic-settings==1.2.2  # pydantic 1.x 호환 버전
+pydantic-settings==0.2.5  # pydantic 1.x 호환 버전
 email-validator==2.1.0
 
 # ML/AI (GPU enabled)
