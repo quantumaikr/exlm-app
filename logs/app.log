@@ -1,0 +1,497 @@
+2025-07-08 03:26:05 | INFO     | app.core.prompt_template:register_template:55 - Registered prompt template: instruction_following
+2025-07-08 03:26:05 | INFO     | app.core.prompt_template:register_template:55 - Registered prompt template: qa_context
+2025-07-08 03:26:05 | INFO     | app.core.prompt_template:register_template:55 - Registered prompt template: chat_conversation
+2025-07-08 03:26:05 | INFO     | app.core.prompt_template:register_template:55 - Registered prompt template: code_generation
+2025-07-08 03:26:05 | INFO     | app.core.prompt_template:register_template:55 - Registered prompt template: summarization
+2025-07-08 03:28:21 | INFO     | app.core.prompt_template:register_template:55 - Registered prompt template: instruction_following
+2025-07-08 03:28:21 | INFO     | app.core.prompt_template:register_template:55 - Registered prompt template: qa_context
+2025-07-08 03:28:21 | INFO     | app.core.prompt_template:register_template:55 - Registered prompt template: chat_conversation
+2025-07-08 03:28:21 | INFO     | app.core.prompt_template:register_template:55 - Registered prompt template: code_generation
+2025-07-08 03:28:21 | INFO     | app.core.prompt_template:register_template:55 - Registered prompt template: summarization
+2025-07-08 03:31:58 | INFO     | app.core.prompt_template:register_template:55 - Registered prompt template: instruction_following
+2025-07-08 03:31:58 | INFO     | app.core.prompt_template:register_template:55 - Registered prompt template: qa_context
+2025-07-08 03:31:58 | INFO     | app.core.prompt_template:register_template:55 - Registered prompt template: chat_conversation
+2025-07-08 03:31:58 | INFO     | app.core.prompt_template:register_template:55 - Registered prompt template: code_generation
+2025-07-08 03:31:58 | INFO     | app.core.prompt_template:register_template:55 - Registered prompt template: summarization
+2025-07-08 03:34:08 | INFO     | app.core.logging:setup_logging:82 - Logging initialized for exlm - Domain-Specific LLM Automation Platform
+2025-07-08 03:34:08 | INFO     | app.main:lifespan:24 - Starting exlm - Domain-Specific LLM Automation Platform v0.1.0
+2025-07-08 03:34:08 | INFO     | app.main:lifespan:26 - Metrics collection started
+2025-07-08 03:34:09 | INFO     | uvicorn.lifespan.on:startup:60 - Application startup complete.
+2025-07-08 03:34:09 | INFO     | uvicorn.lifespan.on:startup:60 - Application startup complete.
+2025-07-08 03:34:13 | INFO     | uvicorn.server:shutdown:264 - Shutting down
+2025-07-08 03:34:13 | INFO     | uvicorn.server:shutdown:264 - Shutting down
+2025-07-08 03:34:13 | INFO     | uvicorn.lifespan.on:shutdown:65 - Waiting for application shutdown.
+2025-07-08 03:34:13 | INFO     | uvicorn.lifespan.on:shutdown:65 - Waiting for application shutdown.
+2025-07-08 03:34:13 | INFO     | app.main:lifespan:29 - Shutting down...
+2025-07-08 03:34:13 | INFO     | uvicorn.lifespan.on:shutdown:76 - Application shutdown complete.
+2025-07-08 03:34:13 | INFO     | uvicorn.lifespan.on:shutdown:76 - Application shutdown complete.
+2025-07-08 03:34:13 | INFO     | uvicorn.server:serve:86 - Finished server process [13]
+2025-07-08 03:34:13 | INFO     | uvicorn.server:serve:86 - Finished server process [13]
+2025-07-08 03:34:14 | INFO     | app.core.logging:setup_logging:82 - Logging initialized for exlm - Domain-Specific LLM Automation Platform
+2025-07-08 03:34:14 | INFO     | app.main:lifespan:24 - Starting exlm - Domain-Specific LLM Automation Platform v0.1.0
+2025-07-08 03:34:14 | INFO     | app.main:lifespan:26 - Metrics collection started
+2025-07-08 03:34:15 | INFO     | uvicorn.lifespan.on:startup:60 - Application startup complete.
+2025-07-08 03:34:15 | INFO     | uvicorn.lifespan.on:startup:60 - Application startup complete.
+2025-07-08 03:34:19 | INFO     | app.middleware.logging:dispatch:19 - Request started: GET /metrics
+2025-07-08 03:34:19 | ERROR    | app.middleware.error_handler:http_exception_handler:12 - HTTP Exception: Not Found
+2025-07-08 03:34:19 | INFO     | app.middleware.logging:dispatch:39 - Request completed: GET /metrics - 404
+2025-07-08 03:34:19 | INFO     | uvicorn.protocols.http.httptools_impl:send:496 - 172.18.0.10:40330 - "GET /metrics HTTP/1.1" 404
+2025-07-08 03:34:34 | INFO     | app.middleware.logging:dispatch:19 - Request started: GET /metrics
+2025-07-08 03:34:34 | ERROR    | app.middleware.error_handler:http_exception_handler:12 - HTTP Exception: Not Found
+2025-07-08 03:34:34 | INFO     | app.middleware.logging:dispatch:39 - Request completed: GET /metrics - 404
+2025-07-08 03:34:34 | INFO     | uvicorn.protocols.http.httptools_impl:send:496 - 172.18.0.10:43440 - "GET /metrics HTTP/1.1" 404
+2025-07-08 03:34:49 | INFO     | app.middleware.logging:dispatch:19 - Request started: GET /metrics
+2025-07-08 03:34:49 | ERROR    | app.middleware.error_handler:http_exception_handler:12 - HTTP Exception: Not Found
+2025-07-08 03:34:49 | INFO     | app.middleware.logging:dispatch:39 - Request completed: GET /metrics - 404
+2025-07-08 03:34:49 | INFO     | uvicorn.protocols.http.httptools_impl:send:496 - 172.18.0.10:59050 - "GET /metrics HTTP/1.1" 404
+2025-07-08 03:34:49 | INFO     | app.middleware.logging:dispatch:19 - Request started: GET /api/v1/health
+2025-07-08 03:34:50 | INFO     | app.middleware.logging:dispatch:39 - Request completed: GET /api/v1/health - 307
+2025-07-08 03:34:50 | INFO     | uvicorn.protocols.http.httptools_impl:send:496 - 192.168.65.1:49982 - "GET /api/v1/health HTTP/1.1" 307
+2025-07-08 03:34:56 | INFO     | app.middleware.logging:dispatch:19 - Request started: GET /api/v1/health/
+2025-07-08 03:34:56 | INFO     | app.middleware.logging:dispatch:39 - Request completed: GET /api/v1/health/ - 200
+2025-07-08 03:34:56 | INFO     | uvicorn.protocols.http.httptools_impl:send:496 - 192.168.65.1:65511 - "GET /api/v1/health/ HTTP/1.1" 200
+2025-07-08 03:35:04 | INFO     | app.middleware.logging:dispatch:19 - Request started: GET /metrics
+2025-07-08 03:35:04 | ERROR    | app.middleware.error_handler:http_exception_handler:12 - HTTP Exception: Not Found
+2025-07-08 03:35:04 | INFO     | app.middleware.logging:dispatch:39 - Request completed: GET /metrics - 404
+2025-07-08 03:35:04 | INFO     | uvicorn.protocols.http.httptools_impl:send:496 - 172.18.0.10:38814 - "GET /metrics HTTP/1.1" 404
+2025-07-08 03:35:19 | INFO     | app.middleware.logging:dispatch:19 - Request started: GET /metrics
+2025-07-08 03:35:19 | ERROR    | app.middleware.error_handler:http_exception_handler:12 - HTTP Exception: Not Found
+2025-07-08 03:35:19 | INFO     | app.middleware.logging:dispatch:39 - Request completed: GET /metrics - 404
+2025-07-08 03:35:19 | INFO     | uvicorn.protocols.http.httptools_impl:send:496 - 172.18.0.10:45986 - "GET /metrics HTTP/1.1" 404
+2025-07-08 03:35:34 | INFO     | app.middleware.logging:dispatch:19 - Request started: GET /metrics
+2025-07-08 03:35:34 | ERROR    | app.middleware.error_handler:http_exception_handler:12 - HTTP Exception: Not Found
+2025-07-08 03:35:34 | INFO     | app.middleware.logging:dispatch:39 - Request completed: GET /metrics - 404
+2025-07-08 03:35:34 | INFO     | uvicorn.protocols.http.httptools_impl:send:496 - 172.18.0.10:50152 - "GET /metrics HTTP/1.1" 404
+2025-07-08 03:35:49 | INFO     | app.middleware.logging:dispatch:19 - Request started: GET /metrics
+2025-07-08 03:35:49 | ERROR    | app.middleware.error_handler:http_exception_handler:12 - HTTP Exception: Not Found
+2025-07-08 03:35:49 | INFO     | app.middleware.logging:dispatch:39 - Request completed: GET /metrics - 404
+2025-07-08 03:35:49 | INFO     | uvicorn.protocols.http.httptools_impl:send:496 - 172.18.0.10:39130 - "GET /metrics HTTP/1.1" 404
+2025-07-08 03:36:04 | INFO     | app.middleware.logging:dispatch:19 - Request started: GET /metrics
+2025-07-08 03:36:04 | ERROR    | app.middleware.error_handler:http_exception_handler:12 - HTTP Exception: Not Found
+2025-07-08 03:36:04 | INFO     | app.middleware.logging:dispatch:39 - Request completed: GET /metrics - 404
+2025-07-08 03:36:04 | INFO     | uvicorn.protocols.http.httptools_impl:send:496 - 172.18.0.10:59320 - "GET /metrics HTTP/1.1" 404
+2025-07-08 03:36:19 | INFO     | app.middleware.logging:dispatch:19 - Request started: GET /metrics
+2025-07-08 03:36:19 | ERROR    | app.middleware.error_handler:http_exception_handler:12 - HTTP Exception: Not Found
+2025-07-08 03:36:19 | INFO     | app.middleware.logging:dispatch:39 - Request completed: GET /metrics - 404
+2025-07-08 03:36:19 | INFO     | uvicorn.protocols.http.httptools_impl:send:496 - 172.18.0.10:47788 - "GET /metrics HTTP/1.1" 404
+2025-07-08 03:36:34 | INFO     | app.middleware.logging:dispatch:19 - Request started: GET /metrics
+2025-07-08 03:36:34 | ERROR    | app.middleware.error_handler:http_exception_handler:12 - HTTP Exception: Not Found
+2025-07-08 03:36:34 | INFO     | app.middleware.logging:dispatch:39 - Request completed: GET /metrics - 404
+2025-07-08 03:36:34 | INFO     | uvicorn.protocols.http.httptools_impl:send:496 - 172.18.0.10:34546 - "GET /metrics HTTP/1.1" 404
+2025-07-08 03:36:37 | INFO     | app.core.prompt_template:register_template:55 - Registered prompt template: instruction_following
+2025-07-08 03:36:37 | INFO     | app.core.prompt_template:register_template:55 - Registered prompt template: qa_context
+2025-07-08 03:36:37 | INFO     | app.core.prompt_template:register_template:55 - Registered prompt template: chat_conversation
+2025-07-08 03:36:37 | INFO     | app.core.prompt_template:register_template:55 - Registered prompt template: code_generation
+2025-07-08 03:36:37 | INFO     | app.core.prompt_template:register_template:55 - Registered prompt template: summarization
+2025-07-08 03:36:50 | INFO     | app.middleware.logging:dispatch:19 - Request started: GET /metrics
+2025-07-08 03:36:50 | ERROR    | app.middleware.error_handler:http_exception_handler:12 - HTTP Exception: Not Found
+2025-07-08 03:36:50 | INFO     | app.middleware.logging:dispatch:39 - Request completed: GET /metrics - 404
+2025-07-08 03:36:50 | INFO     | uvicorn.protocols.http.httptools_impl:send:496 - 172.18.0.10:34870 - "GET /metrics HTTP/1.1" 404
+2025-07-08 03:37:04 | INFO     | app.middleware.logging:dispatch:19 - Request started: GET /metrics
+2025-07-08 03:37:04 | ERROR    | app.middleware.error_handler:http_exception_handler:12 - HTTP Exception: Not Found
+2025-07-08 03:37:04 | INFO     | app.middleware.logging:dispatch:39 - Request completed: GET /metrics - 404
+2025-07-08 03:37:04 | INFO     | uvicorn.protocols.http.httptools_impl:send:496 - 172.18.0.10:47032 - "GET /metrics HTTP/1.1" 404
+2025-07-08 03:37:19 | INFO     | app.middleware.logging:dispatch:19 - Request started: GET /metrics
+2025-07-08 03:37:19 | ERROR    | app.middleware.error_handler:http_exception_handler:12 - HTTP Exception: Not Found
+2025-07-08 03:37:19 | INFO     | app.middleware.logging:dispatch:39 - Request completed: GET /metrics - 404
+2025-07-08 03:37:19 | INFO     | uvicorn.protocols.http.httptools_impl:send:496 - 172.18.0.10:57290 - "GET /metrics HTTP/1.1" 404
+2025-07-08 03:37:34 | INFO     | app.middleware.logging:dispatch:19 - Request started: GET /metrics
+2025-07-08 03:37:34 | ERROR    | app.middleware.error_handler:http_exception_handler:12 - HTTP Exception: Not Found
+2025-07-08 03:37:34 | INFO     | app.middleware.logging:dispatch:39 - Request completed: GET /metrics - 404
+2025-07-08 03:37:34 | INFO     | uvicorn.protocols.http.httptools_impl:send:496 - 172.18.0.10:48774 - "GET /metrics HTTP/1.1" 404
+2025-07-08 03:37:39 | INFO     | uvicorn.server:shutdown:264 - Shutting down
+2025-07-08 03:37:39 | INFO     | uvicorn.server:shutdown:264 - Shutting down
+2025-07-08 03:37:39 | INFO     | uvicorn.lifespan.on:shutdown:65 - Waiting for application shutdown.
+2025-07-08 03:37:39 | INFO     | uvicorn.lifespan.on:shutdown:65 - Waiting for application shutdown.
+2025-07-08 03:37:39 | INFO     | app.main:lifespan:29 - Shutting down...
+2025-07-08 03:37:39 | INFO     | uvicorn.lifespan.on:shutdown:76 - Application shutdown complete.
+2025-07-08 03:37:39 | INFO     | uvicorn.lifespan.on:shutdown:76 - Application shutdown complete.
+2025-07-08 03:37:39 | INFO     | uvicorn.server:serve:86 - Finished server process [8]
+2025-07-08 03:37:39 | INFO     | uvicorn.server:serve:86 - Finished server process [8]
+2025-07-08 03:37:40 | INFO     | app.core.logging:setup_logging:82 - Logging initialized for exlm - Domain-Specific LLM Automation Platform
+2025-07-08 03:37:40 | INFO     | app.main:lifespan:24 - Starting exlm - Domain-Specific LLM Automation Platform v0.1.0
+2025-07-08 03:37:40 | INFO     | app.main:lifespan:26 - Metrics collection started
+2025-07-08 03:37:41 | INFO     | uvicorn.lifespan.on:startup:60 - Application startup complete.
+2025-07-08 03:37:41 | INFO     | uvicorn.lifespan.on:startup:60 - Application startup complete.
+2025-07-08 03:37:46 | INFO     | uvicorn.server:shutdown:264 - Shutting down
+2025-07-08 03:37:46 | INFO     | uvicorn.server:shutdown:264 - Shutting down
+2025-07-08 03:37:46 | INFO     | uvicorn.lifespan.on:shutdown:65 - Waiting for application shutdown.
+2025-07-08 03:37:46 | INFO     | uvicorn.lifespan.on:shutdown:65 - Waiting for application shutdown.
+2025-07-08 03:37:46 | INFO     | app.main:lifespan:29 - Shutting down...
+2025-07-08 03:37:46 | INFO     | uvicorn.lifespan.on:shutdown:76 - Application shutdown complete.
+2025-07-08 03:37:46 | INFO     | uvicorn.lifespan.on:shutdown:76 - Application shutdown complete.
+2025-07-08 03:37:46 | INFO     | uvicorn.server:serve:86 - Finished server process [11]
+2025-07-08 03:37:46 | INFO     | uvicorn.server:serve:86 - Finished server process [11]
+2025-07-08 03:37:47 | INFO     | app.core.logging:setup_logging:82 - Logging initialized for exlm - Domain-Specific LLM Automation Platform
+2025-07-08 03:37:47 | INFO     | app.main:lifespan:24 - Starting exlm - Domain-Specific LLM Automation Platform v0.1.0
+2025-07-08 03:37:47 | INFO     | app.main:lifespan:26 - Metrics collection started
+2025-07-08 03:37:48 | INFO     | uvicorn.lifespan.on:startup:60 - Application startup complete.
+2025-07-08 03:37:48 | INFO     | uvicorn.lifespan.on:startup:60 - Application startup complete.
+2025-07-08 03:37:49 | INFO     | app.middleware.logging:dispatch:19 - Request started: GET /metrics
+2025-07-08 03:37:49 | ERROR    | app.middleware.error_handler:http_exception_handler:12 - HTTP Exception: Not Found
+2025-07-08 03:37:49 | INFO     | app.middleware.logging:dispatch:39 - Request completed: GET /metrics - 404
+2025-07-08 03:37:49 | INFO     | uvicorn.protocols.http.httptools_impl:send:496 - 172.18.0.10:52456 - "GET /metrics HTTP/1.1" 404
+2025-07-08 03:37:52 | INFO     | uvicorn.server:shutdown:264 - Shutting down
+2025-07-08 03:37:52 | INFO     | uvicorn.server:shutdown:264 - Shutting down
+2025-07-08 03:37:52 | INFO     | uvicorn.lifespan.on:shutdown:65 - Waiting for application shutdown.
+2025-07-08 03:37:52 | INFO     | uvicorn.lifespan.on:shutdown:65 - Waiting for application shutdown.
+2025-07-08 03:37:52 | INFO     | app.main:lifespan:29 - Shutting down...
+2025-07-08 03:37:52 | INFO     | uvicorn.lifespan.on:shutdown:76 - Application shutdown complete.
+2025-07-08 03:37:52 | INFO     | uvicorn.lifespan.on:shutdown:76 - Application shutdown complete.
+2025-07-08 03:37:52 | INFO     | uvicorn.server:serve:86 - Finished server process [13]
+2025-07-08 03:37:52 | INFO     | uvicorn.server:serve:86 - Finished server process [13]
+2025-07-08 03:37:53 | INFO     | app.core.logging:setup_logging:82 - Logging initialized for exlm - Domain-Specific LLM Automation Platform
+2025-07-08 03:37:53 | INFO     | app.main:lifespan:24 - Starting exlm - Domain-Specific LLM Automation Platform v0.1.0
+2025-07-08 03:37:53 | INFO     | app.main:lifespan:26 - Metrics collection started
+2025-07-08 03:37:54 | INFO     | uvicorn.lifespan.on:startup:60 - Application startup complete.
+2025-07-08 03:37:54 | INFO     | uvicorn.lifespan.on:startup:60 - Application startup complete.
+2025-07-08 03:37:58 | INFO     | uvicorn.server:shutdown:264 - Shutting down
+2025-07-08 03:37:58 | INFO     | uvicorn.server:shutdown:264 - Shutting down
+2025-07-08 03:37:58 | INFO     | uvicorn.lifespan.on:shutdown:65 - Waiting for application shutdown.
+2025-07-08 03:37:58 | INFO     | uvicorn.lifespan.on:shutdown:65 - Waiting for application shutdown.
+2025-07-08 03:37:58 | INFO     | app.main:lifespan:29 - Shutting down...
+2025-07-08 03:37:58 | INFO     | uvicorn.lifespan.on:shutdown:76 - Application shutdown complete.
+2025-07-08 03:37:58 | INFO     | uvicorn.lifespan.on:shutdown:76 - Application shutdown complete.
+2025-07-08 03:37:58 | INFO     | uvicorn.server:serve:86 - Finished server process [15]
+2025-07-08 03:37:58 | INFO     | uvicorn.server:serve:86 - Finished server process [15]
+2025-07-08 03:37:58 | INFO     | app.core.logging:setup_logging:82 - Logging initialized for exlm - Domain-Specific LLM Automation Platform
+2025-07-08 03:37:58 | INFO     | app.main:lifespan:24 - Starting exlm - Domain-Specific LLM Automation Platform v0.1.0
+2025-07-08 03:37:58 | INFO     | app.main:lifespan:26 - Metrics collection started
+2025-07-08 03:37:59 | INFO     | uvicorn.lifespan.on:startup:60 - Application startup complete.
+2025-07-08 03:37:59 | INFO     | uvicorn.lifespan.on:startup:60 - Application startup complete.
+2025-07-08 03:38:03 | INFO     | uvicorn.server:shutdown:264 - Shutting down
+2025-07-08 03:38:03 | INFO     | uvicorn.server:shutdown:264 - Shutting down
+2025-07-08 03:38:03 | INFO     | uvicorn.lifespan.on:shutdown:65 - Waiting for application shutdown.
+2025-07-08 03:38:03 | INFO     | uvicorn.lifespan.on:shutdown:65 - Waiting for application shutdown.
+2025-07-08 03:38:03 | INFO     | app.main:lifespan:29 - Shutting down...
+2025-07-08 03:38:03 | INFO     | uvicorn.lifespan.on:shutdown:76 - Application shutdown complete.
+2025-07-08 03:38:03 | INFO     | uvicorn.lifespan.on:shutdown:76 - Application shutdown complete.
+2025-07-08 03:38:03 | INFO     | uvicorn.server:serve:86 - Finished server process [17]
+2025-07-08 03:38:03 | INFO     | uvicorn.server:serve:86 - Finished server process [17]
+2025-07-08 03:38:04 | INFO     | app.core.logging:setup_logging:82 - Logging initialized for exlm - Domain-Specific LLM Automation Platform
+2025-07-08 03:38:04 | INFO     | app.main:lifespan:24 - Starting exlm - Domain-Specific LLM Automation Platform v0.1.0
+2025-07-08 03:38:04 | INFO     | app.main:lifespan:26 - Metrics collection started
+2025-07-08 03:38:05 | INFO     | uvicorn.lifespan.on:startup:60 - Application startup complete.
+2025-07-08 03:38:05 | INFO     | uvicorn.lifespan.on:startup:60 - Application startup complete.
+2025-07-08 03:38:05 | INFO     | app.middleware.logging:dispatch:19 - Request started: GET /metrics
+2025-07-08 03:38:05 | ERROR    | app.middleware.error_handler:http_exception_handler:12 - HTTP Exception: Not Found
+2025-07-08 03:38:05 | INFO     | app.middleware.logging:dispatch:39 - Request completed: GET /metrics - 404
+2025-07-08 03:38:05 | INFO     | uvicorn.protocols.http.httptools_impl:send:496 - 172.18.0.10:46552 - "GET /metrics HTTP/1.1" 404
+2025-07-08 03:38:08 | INFO     | uvicorn.server:shutdown:264 - Shutting down
+2025-07-08 03:38:08 | INFO     | uvicorn.server:shutdown:264 - Shutting down
+2025-07-08 03:38:08 | INFO     | uvicorn.lifespan.on:shutdown:65 - Waiting for application shutdown.
+2025-07-08 03:38:08 | INFO     | uvicorn.lifespan.on:shutdown:65 - Waiting for application shutdown.
+2025-07-08 03:38:08 | INFO     | app.main:lifespan:29 - Shutting down...
+2025-07-08 03:38:08 | INFO     | uvicorn.lifespan.on:shutdown:76 - Application shutdown complete.
+2025-07-08 03:38:08 | INFO     | uvicorn.lifespan.on:shutdown:76 - Application shutdown complete.
+2025-07-08 03:38:08 | INFO     | uvicorn.server:serve:86 - Finished server process [19]
+2025-07-08 03:38:08 | INFO     | uvicorn.server:serve:86 - Finished server process [19]
+2025-07-08 03:38:09 | INFO     | app.core.logging:setup_logging:82 - Logging initialized for exlm - Domain-Specific LLM Automation Platform
+2025-07-08 03:38:09 | INFO     | app.main:lifespan:24 - Starting exlm - Domain-Specific LLM Automation Platform v0.1.0
+2025-07-08 03:38:09 | INFO     | app.main:lifespan:26 - Metrics collection started
+2025-07-08 03:38:10 | INFO     | uvicorn.lifespan.on:startup:60 - Application startup complete.
+2025-07-08 03:38:10 | INFO     | uvicorn.lifespan.on:startup:60 - Application startup complete.
+2025-07-08 03:38:18 | INFO     | app.core.prompt_template:register_template:55 - Registered prompt template: instruction_following
+2025-07-08 03:38:18 | INFO     | app.core.prompt_template:register_template:55 - Registered prompt template: qa_context
+2025-07-08 03:38:18 | INFO     | app.core.prompt_template:register_template:55 - Registered prompt template: chat_conversation
+2025-07-08 03:38:18 | INFO     | app.core.prompt_template:register_template:55 - Registered prompt template: code_generation
+2025-07-08 03:38:18 | INFO     | app.core.prompt_template:register_template:55 - Registered prompt template: summarization
+2025-07-08 03:38:19 | INFO     | app.middleware.logging:dispatch:19 - Request started: GET /metrics
+2025-07-08 03:38:19 | ERROR    | app.middleware.error_handler:http_exception_handler:12 - HTTP Exception: Not Found
+2025-07-08 03:38:19 | INFO     | app.middleware.logging:dispatch:39 - Request completed: GET /metrics - 404
+2025-07-08 03:38:19 | INFO     | uvicorn.protocols.http.httptools_impl:send:496 - 172.18.0.10:55046 - "GET /metrics HTTP/1.1" 404
+2025-07-08 03:38:28 | INFO     | uvicorn.server:shutdown:264 - Shutting down
+2025-07-08 03:38:28 | INFO     | uvicorn.server:shutdown:264 - Shutting down
+2025-07-08 03:38:28 | INFO     | uvicorn.lifespan.on:shutdown:65 - Waiting for application shutdown.
+2025-07-08 03:38:28 | INFO     | uvicorn.lifespan.on:shutdown:65 - Waiting for application shutdown.
+2025-07-08 03:38:28 | INFO     | app.main:lifespan:29 - Shutting down...
+2025-07-08 03:38:28 | INFO     | uvicorn.lifespan.on:shutdown:76 - Application shutdown complete.
+2025-07-08 03:38:28 | INFO     | uvicorn.lifespan.on:shutdown:76 - Application shutdown complete.
+2025-07-08 03:38:28 | INFO     | uvicorn.server:serve:86 - Finished server process [21]
+2025-07-08 03:38:28 | INFO     | uvicorn.server:serve:86 - Finished server process [21]
+2025-07-08 03:38:29 | INFO     | app.core.logging:setup_logging:82 - Logging initialized for exlm - Domain-Specific LLM Automation Platform
+2025-07-08 03:38:29 | INFO     | app.main:lifespan:24 - Starting exlm - Domain-Specific LLM Automation Platform v0.1.0
+2025-07-08 03:38:29 | INFO     | app.main:lifespan:26 - Metrics collection started
+2025-07-08 03:38:30 | INFO     | uvicorn.lifespan.on:startup:60 - Application startup complete.
+2025-07-08 03:38:30 | INFO     | uvicorn.lifespan.on:startup:60 - Application startup complete.
+2025-07-08 03:38:33 | INFO     | uvicorn.server:shutdown:264 - Shutting down
+2025-07-08 03:38:33 | INFO     | uvicorn.server:shutdown:264 - Shutting down
+2025-07-08 03:38:33 | INFO     | uvicorn.lifespan.on:shutdown:65 - Waiting for application shutdown.
+2025-07-08 03:38:33 | INFO     | uvicorn.lifespan.on:shutdown:65 - Waiting for application shutdown.
+2025-07-08 03:38:33 | INFO     | app.main:lifespan:29 - Shutting down...
+2025-07-08 03:38:33 | INFO     | uvicorn.lifespan.on:shutdown:76 - Application shutdown complete.
+2025-07-08 03:38:33 | INFO     | uvicorn.lifespan.on:shutdown:76 - Application shutdown complete.
+2025-07-08 03:38:33 | INFO     | uvicorn.server:serve:86 - Finished server process [23]
+2025-07-08 03:38:33 | INFO     | uvicorn.server:serve:86 - Finished server process [23]
+2025-07-08 03:38:34 | INFO     | app.core.logging:setup_logging:82 - Logging initialized for exlm - Domain-Specific LLM Automation Platform
+2025-07-08 03:38:34 | INFO     | app.main:lifespan:24 - Starting exlm - Domain-Specific LLM Automation Platform v0.1.0
+2025-07-08 03:38:34 | INFO     | app.main:lifespan:26 - Metrics collection started
+2025-07-08 03:38:35 | INFO     | uvicorn.lifespan.on:startup:60 - Application startup complete.
+2025-07-08 03:38:35 | INFO     | uvicorn.lifespan.on:startup:60 - Application startup complete.
+2025-07-08 03:38:35 | INFO     | app.middleware.logging:dispatch:19 - Request started: GET /metrics
+2025-07-08 03:38:35 | ERROR    | app.middleware.error_handler:http_exception_handler:12 - HTTP Exception: Not Found
+2025-07-08 03:38:35 | INFO     | app.middleware.logging:dispatch:39 - Request completed: GET /metrics - 404
+2025-07-08 03:38:35 | INFO     | uvicorn.protocols.http.httptools_impl:send:496 - 172.18.0.10:45226 - "GET /metrics HTTP/1.1" 404
+2025-07-08 03:38:37 | INFO     | uvicorn.server:shutdown:264 - Shutting down
+2025-07-08 03:38:37 | INFO     | uvicorn.server:shutdown:264 - Shutting down
+2025-07-08 03:38:37 | INFO     | uvicorn.lifespan.on:shutdown:65 - Waiting for application shutdown.
+2025-07-08 03:38:37 | INFO     | uvicorn.lifespan.on:shutdown:65 - Waiting for application shutdown.
+2025-07-08 03:38:37 | INFO     | app.main:lifespan:29 - Shutting down...
+2025-07-08 03:38:37 | INFO     | uvicorn.lifespan.on:shutdown:76 - Application shutdown complete.
+2025-07-08 03:38:37 | INFO     | uvicorn.lifespan.on:shutdown:76 - Application shutdown complete.
+2025-07-08 03:38:37 | INFO     | uvicorn.server:serve:86 - Finished server process [25]
+2025-07-08 03:38:37 | INFO     | uvicorn.server:serve:86 - Finished server process [25]
+2025-07-08 03:38:38 | INFO     | app.core.logging:setup_logging:82 - Logging initialized for exlm - Domain-Specific LLM Automation Platform
+2025-07-08 03:38:38 | INFO     | app.main:lifespan:24 - Starting exlm - Domain-Specific LLM Automation Platform v0.1.0
+2025-07-08 03:38:38 | INFO     | app.main:lifespan:26 - Metrics collection started
+2025-07-08 03:38:39 | INFO     | uvicorn.lifespan.on:startup:60 - Application startup complete.
+2025-07-08 03:38:39 | INFO     | uvicorn.lifespan.on:startup:60 - Application startup complete.
+2025-07-08 03:38:46 | INFO     | uvicorn.server:shutdown:264 - Shutting down
+2025-07-08 03:38:46 | INFO     | uvicorn.server:shutdown:264 - Shutting down
+2025-07-08 03:38:46 | INFO     | uvicorn.lifespan.on:shutdown:65 - Waiting for application shutdown.
+2025-07-08 03:38:46 | INFO     | uvicorn.lifespan.on:shutdown:65 - Waiting for application shutdown.
+2025-07-08 03:38:46 | INFO     | app.main:lifespan:29 - Shutting down...
+2025-07-08 03:38:46 | INFO     | uvicorn.lifespan.on:shutdown:76 - Application shutdown complete.
+2025-07-08 03:38:46 | INFO     | uvicorn.lifespan.on:shutdown:76 - Application shutdown complete.
+2025-07-08 03:38:46 | INFO     | uvicorn.server:serve:86 - Finished server process [27]
+2025-07-08 03:38:46 | INFO     | uvicorn.server:serve:86 - Finished server process [27]
+2025-07-08 03:38:47 | INFO     | app.core.logging:setup_logging:82 - Logging initialized for exlm - Domain-Specific LLM Automation Platform
+2025-07-08 03:38:47 | INFO     | app.main:lifespan:24 - Starting exlm - Domain-Specific LLM Automation Platform v0.1.0
+2025-07-08 03:38:47 | INFO     | app.main:lifespan:26 - Metrics collection started
+2025-07-08 03:38:48 | INFO     | uvicorn.lifespan.on:startup:60 - Application startup complete.
+2025-07-08 03:38:48 | INFO     | uvicorn.lifespan.on:startup:60 - Application startup complete.
+2025-07-08 03:38:49 | INFO     | app.middleware.logging:dispatch:19 - Request started: GET /metrics
+2025-07-08 03:38:49 | ERROR    | app.middleware.error_handler:http_exception_handler:12 - HTTP Exception: Not Found
+2025-07-08 03:38:49 | INFO     | app.middleware.logging:dispatch:39 - Request completed: GET /metrics - 404
+2025-07-08 03:38:49 | INFO     | uvicorn.protocols.http.httptools_impl:send:496 - 172.18.0.10:50356 - "GET /metrics HTTP/1.1" 404
+2025-07-08 03:38:51 | INFO     | uvicorn.server:shutdown:264 - Shutting down
+2025-07-08 03:38:51 | INFO     | uvicorn.server:shutdown:264 - Shutting down
+2025-07-08 03:38:51 | INFO     | uvicorn.lifespan.on:shutdown:65 - Waiting for application shutdown.
+2025-07-08 03:38:51 | INFO     | uvicorn.lifespan.on:shutdown:65 - Waiting for application shutdown.
+2025-07-08 03:38:51 | INFO     | app.main:lifespan:29 - Shutting down...
+2025-07-08 03:38:51 | INFO     | uvicorn.lifespan.on:shutdown:76 - Application shutdown complete.
+2025-07-08 03:38:51 | INFO     | uvicorn.lifespan.on:shutdown:76 - Application shutdown complete.
+2025-07-08 03:38:51 | INFO     | uvicorn.server:serve:86 - Finished server process [29]
+2025-07-08 03:38:51 | INFO     | uvicorn.server:serve:86 - Finished server process [29]
+2025-07-08 03:38:52 | INFO     | app.core.logging:setup_logging:82 - Logging initialized for exlm - Domain-Specific LLM Automation Platform
+2025-07-08 03:38:52 | INFO     | app.main:lifespan:24 - Starting exlm - Domain-Specific LLM Automation Platform v0.1.0
+2025-07-08 03:38:52 | INFO     | app.main:lifespan:26 - Metrics collection started
+2025-07-08 03:38:53 | INFO     | uvicorn.lifespan.on:startup:60 - Application startup complete.
+2025-07-08 03:38:53 | INFO     | uvicorn.lifespan.on:startup:60 - Application startup complete.
+2025-07-08 03:38:57 | INFO     | app.core.prompt_template:register_template:55 - Registered prompt template: instruction_following
+2025-07-08 03:38:57 | INFO     | app.core.prompt_template:register_template:55 - Registered prompt template: qa_context
+2025-07-08 03:38:57 | INFO     | app.core.prompt_template:register_template:55 - Registered prompt template: chat_conversation
+2025-07-08 03:38:57 | INFO     | app.core.prompt_template:register_template:55 - Registered prompt template: code_generation
+2025-07-08 03:38:57 | INFO     | app.core.prompt_template:register_template:55 - Registered prompt template: summarization
+2025-07-08 03:39:04 | INFO     | app.middleware.logging:dispatch:19 - Request started: GET /metrics
+2025-07-08 03:39:04 | ERROR    | app.middleware.error_handler:http_exception_handler:12 - HTTP Exception: Not Found
+2025-07-08 03:39:04 | INFO     | app.middleware.logging:dispatch:39 - Request completed: GET /metrics - 404
+2025-07-08 03:39:04 | INFO     | uvicorn.protocols.http.httptools_impl:send:496 - 172.18.0.10:37734 - "GET /metrics HTTP/1.1" 404
+2025-07-08 03:39:11 | INFO     | uvicorn.server:shutdown:264 - Shutting down
+2025-07-08 03:39:11 | INFO     | uvicorn.server:shutdown:264 - Shutting down
+2025-07-08 03:39:11 | INFO     | uvicorn.lifespan.on:shutdown:65 - Waiting for application shutdown.
+2025-07-08 03:39:11 | INFO     | uvicorn.lifespan.on:shutdown:65 - Waiting for application shutdown.
+2025-07-08 03:39:11 | INFO     | app.main:lifespan:29 - Shutting down...
+2025-07-08 03:39:11 | INFO     | uvicorn.lifespan.on:shutdown:76 - Application shutdown complete.
+2025-07-08 03:39:11 | INFO     | uvicorn.lifespan.on:shutdown:76 - Application shutdown complete.
+2025-07-08 03:39:11 | INFO     | uvicorn.server:serve:86 - Finished server process [31]
+2025-07-08 03:39:11 | INFO     | uvicorn.server:serve:86 - Finished server process [31]
+2025-07-08 03:39:11 | INFO     | app.core.logging:setup_logging:82 - Logging initialized for exlm - Domain-Specific LLM Automation Platform
+2025-07-08 03:39:11 | INFO     | app.main:lifespan:24 - Starting exlm - Domain-Specific LLM Automation Platform v0.1.0
+2025-07-08 03:39:11 | INFO     | app.main:lifespan:26 - Metrics collection started
+2025-07-08 03:39:12 | INFO     | uvicorn.lifespan.on:startup:60 - Application startup complete.
+2025-07-08 03:39:12 | INFO     | uvicorn.lifespan.on:startup:60 - Application startup complete.
+2025-07-08 03:39:16 | INFO     | uvicorn.server:shutdown:264 - Shutting down
+2025-07-08 03:39:16 | INFO     | uvicorn.server:shutdown:264 - Shutting down
+2025-07-08 03:39:16 | INFO     | uvicorn.lifespan.on:shutdown:65 - Waiting for application shutdown.
+2025-07-08 03:39:16 | INFO     | uvicorn.lifespan.on:shutdown:65 - Waiting for application shutdown.
+2025-07-08 03:39:16 | INFO     | app.main:lifespan:29 - Shutting down...
+2025-07-08 03:39:16 | INFO     | uvicorn.lifespan.on:shutdown:76 - Application shutdown complete.
+2025-07-08 03:39:16 | INFO     | uvicorn.lifespan.on:shutdown:76 - Application shutdown complete.
+2025-07-08 03:39:16 | INFO     | uvicorn.server:serve:86 - Finished server process [33]
+2025-07-08 03:39:16 | INFO     | uvicorn.server:serve:86 - Finished server process [33]
+2025-07-08 03:39:17 | INFO     | app.core.logging:setup_logging:82 - Logging initialized for exlm - Domain-Specific LLM Automation Platform
+2025-07-08 03:39:17 | INFO     | app.main:lifespan:24 - Starting exlm - Domain-Specific LLM Automation Platform v0.1.0
+2025-07-08 03:39:17 | INFO     | app.main:lifespan:26 - Metrics collection started
+2025-07-08 03:39:18 | INFO     | uvicorn.lifespan.on:startup:60 - Application startup complete.
+2025-07-08 03:39:18 | INFO     | uvicorn.lifespan.on:startup:60 - Application startup complete.
+2025-07-08 03:39:19 | INFO     | app.middleware.logging:dispatch:19 - Request started: GET /metrics
+2025-07-08 03:39:19 | ERROR    | app.middleware.error_handler:http_exception_handler:12 - HTTP Exception: Not Found
+2025-07-08 03:39:19 | INFO     | app.middleware.logging:dispatch:39 - Request completed: GET /metrics - 404
+2025-07-08 03:39:19 | INFO     | uvicorn.protocols.http.httptools_impl:send:496 - 172.18.0.10:40744 - "GET /metrics HTTP/1.1" 404
+2025-07-08 03:39:25 | INFO     | app.core.prompt_template:register_template:55 - Registered prompt template: instruction_following
+2025-07-08 03:39:25 | INFO     | app.core.prompt_template:register_template:55 - Registered prompt template: qa_context
+2025-07-08 03:39:25 | INFO     | app.core.prompt_template:register_template:55 - Registered prompt template: chat_conversation
+2025-07-08 03:39:25 | INFO     | app.core.prompt_template:register_template:55 - Registered prompt template: code_generation
+2025-07-08 03:39:25 | INFO     | app.core.prompt_template:register_template:55 - Registered prompt template: summarization
+2025-07-08 03:39:34 | INFO     | app.middleware.logging:dispatch:19 - Request started: GET /metrics
+2025-07-08 03:39:34 | ERROR    | app.middleware.error_handler:http_exception_handler:12 - HTTP Exception: Not Found
+2025-07-08 03:39:34 | INFO     | app.middleware.logging:dispatch:39 - Request completed: GET /metrics - 404
+2025-07-08 03:39:34 | INFO     | uvicorn.protocols.http.httptools_impl:send:496 - 172.18.0.10:39822 - "GET /metrics HTTP/1.1" 404
+2025-07-08 03:39:43 | INFO     | app.middleware.logging:dispatch:19 - Request started: GET /health
+2025-07-08 03:39:43 | ERROR    | app.middleware.error_handler:http_exception_handler:12 - HTTP Exception: Not Found
+2025-07-08 03:39:43 | INFO     | app.middleware.logging:dispatch:39 - Request completed: GET /health - 404
+2025-07-08 03:39:43 | INFO     | uvicorn.protocols.http.httptools_impl:send:496 - 192.168.65.1:42113 - "GET /health HTTP/1.1" 404
+2025-07-08 03:39:49 | INFO     | app.middleware.logging:dispatch:19 - Request started: GET /metrics
+2025-07-08 03:39:49 | ERROR    | app.middleware.error_handler:http_exception_handler:12 - HTTP Exception: Not Found
+2025-07-08 03:39:49 | INFO     | app.middleware.logging:dispatch:39 - Request completed: GET /metrics - 404
+2025-07-08 03:39:49 | INFO     | uvicorn.protocols.http.httptools_impl:send:496 - 172.18.0.10:44568 - "GET /metrics HTTP/1.1" 404
+2025-07-08 03:39:52 | INFO     | app.middleware.logging:dispatch:19 - Request started: GET /api/v1/health
+2025-07-08 03:39:52 | INFO     | app.middleware.logging:dispatch:39 - Request completed: GET /api/v1/health - 307
+2025-07-08 03:39:52 | INFO     | uvicorn.protocols.http.httptools_impl:send:496 - 192.168.65.1:18483 - "GET /api/v1/health HTTP/1.1" 307
+2025-07-08 03:40:02 | INFO     | app.middleware.logging:dispatch:19 - Request started: GET /api/v1/health
+2025-07-08 03:40:02 | INFO     | app.middleware.logging:dispatch:39 - Request completed: GET /api/v1/health - 307
+2025-07-08 03:40:02 | INFO     | uvicorn.protocols.http.httptools_impl:send:496 - 192.168.65.1:21375 - "GET /api/v1/health HTTP/1.1" 307
+2025-07-08 03:40:02 | INFO     | app.middleware.logging:dispatch:19 - Request started: GET /api/v1/health/
+2025-07-08 03:40:02 | INFO     | app.middleware.logging:dispatch:39 - Request completed: GET /api/v1/health/ - 200
+2025-07-08 03:40:02 | INFO     | uvicorn.protocols.http.httptools_impl:send:496 - 192.168.65.1:21375 - "GET /api/v1/health/ HTTP/1.1" 200
+2025-07-08 03:40:04 | INFO     | app.middleware.logging:dispatch:19 - Request started: GET /metrics
+2025-07-08 03:40:04 | ERROR    | app.middleware.error_handler:http_exception_handler:12 - HTTP Exception: Not Found
+2025-07-08 03:40:04 | INFO     | app.middleware.logging:dispatch:39 - Request completed: GET /metrics - 404
+2025-07-08 03:40:04 | INFO     | uvicorn.protocols.http.httptools_impl:send:496 - 172.18.0.10:48170 - "GET /metrics HTTP/1.1" 404
+2025-07-08 03:40:20 | INFO     | app.middleware.logging:dispatch:19 - Request started: GET /metrics
+2025-07-08 03:40:20 | ERROR    | app.middleware.error_handler:http_exception_handler:12 - HTTP Exception: Not Found
+2025-07-08 03:40:20 | INFO     | app.middleware.logging:dispatch:39 - Request completed: GET /metrics - 404
+2025-07-08 03:40:20 | INFO     | uvicorn.protocols.http.httptools_impl:send:496 - 172.18.0.10:49504 - "GET /metrics HTTP/1.1" 404
+2025-07-08 03:45:18 | INFO     | app.core.logging:setup_logging:82 - Logging initialized for exlm - Domain-Specific LLM Automation Platform
+2025-07-08 03:45:18 | INFO     | app.main:lifespan:24 - Starting exlm - Domain-Specific LLM Automation Platform v0.1.0
+2025-07-08 03:45:18 | INFO     | app.main:lifespan:26 - Metrics collection started
+2025-07-08 03:45:19 | INFO     | uvicorn.lifespan.on:startup:60 - Application startup complete.
+2025-07-08 03:45:19 | INFO     | uvicorn.lifespan.on:startup:60 - Application startup complete.
+2025-07-08 03:45:25 | INFO     | app.core.prompt_template:register_template:55 - Registered prompt template: instruction_following
+2025-07-08 03:45:25 | INFO     | app.core.prompt_template:register_template:55 - Registered prompt template: qa_context
+2025-07-08 03:45:25 | INFO     | app.core.prompt_template:register_template:55 - Registered prompt template: chat_conversation
+2025-07-08 03:45:25 | INFO     | app.core.prompt_template:register_template:55 - Registered prompt template: code_generation
+2025-07-08 03:45:25 | INFO     | app.core.prompt_template:register_template:55 - Registered prompt template: summarization
+2025-07-08 03:45:34 | INFO     | app.middleware.logging:dispatch:19 - Request started: GET /metrics
+2025-07-08 03:45:34 | ERROR    | app.middleware.error_handler:http_exception_handler:12 - HTTP Exception: Not Found
+2025-07-08 03:45:34 | INFO     | app.middleware.logging:dispatch:39 - Request completed: GET /metrics - 404
+2025-07-08 03:45:34 | INFO     | uvicorn.protocols.http.httptools_impl:send:496 - 172.18.0.10:49096 - "GET /metrics HTTP/1.1" 404
+2025-07-08 03:53:18 | INFO     | app.core.logging:setup_logging:82 - Logging initialized for exlm - Domain-Specific LLM Automation Platform
+2025-07-08 03:53:18 | INFO     | app.main:lifespan:24 - Starting exlm - Domain-Specific LLM Automation Platform v0.1.0
+2025-07-08 03:53:18 | INFO     | app.main:lifespan:26 - Metrics collection started
+2025-07-08 03:53:19 | INFO     | uvicorn.lifespan.on:startup:60 - Application startup complete.
+2025-07-08 03:53:19 | INFO     | uvicorn.lifespan.on:startup:60 - Application startup complete.
+2025-07-08 03:53:31 | INFO     | app.middleware.logging:dispatch:19 - Request started: GET /metrics
+2025-07-08 03:53:31 | ERROR    | app.middleware.error_handler:http_exception_handler:12 - HTTP Exception: Not Found
+2025-07-08 03:53:31 | INFO     | app.middleware.logging:dispatch:39 - Request completed: GET /metrics - 404
+2025-07-08 03:53:31 | INFO     | uvicorn.protocols.http.httptools_impl:send:496 - 172.18.0.11:37170 - "GET /metrics HTTP/1.1" 404
+2025-07-08 03:53:38 | INFO     | app.core.prompt_template:register_template:55 - Registered prompt template: instruction_following
+2025-07-08 03:53:38 | INFO     | app.core.prompt_template:register_template:55 - Registered prompt template: qa_context
+2025-07-08 03:53:38 | INFO     | app.core.prompt_template:register_template:55 - Registered prompt template: chat_conversation
+2025-07-08 03:53:38 | INFO     | app.core.prompt_template:register_template:55 - Registered prompt template: code_generation
+2025-07-08 03:53:38 | INFO     | app.core.prompt_template:register_template:55 - Registered prompt template: summarization
+2025-07-08 03:53:41 | INFO     | uvicorn.server:shutdown:264 - Shutting down
+2025-07-08 03:53:41 | INFO     | uvicorn.server:shutdown:264 - Shutting down
+2025-07-08 03:53:41 | INFO     | uvicorn.lifespan.on:shutdown:65 - Waiting for application shutdown.
+2025-07-08 03:53:41 | INFO     | uvicorn.lifespan.on:shutdown:65 - Waiting for application shutdown.
+2025-07-08 03:53:41 | INFO     | app.main:lifespan:29 - Shutting down...
+2025-07-08 03:53:41 | INFO     | uvicorn.lifespan.on:shutdown:76 - Application shutdown complete.
+2025-07-08 03:53:41 | INFO     | uvicorn.lifespan.on:shutdown:76 - Application shutdown complete.
+2025-07-08 03:53:41 | INFO     | uvicorn.server:serve:86 - Finished server process [8]
+2025-07-08 03:53:41 | INFO     | uvicorn.server:serve:86 - Finished server process [8]
+2025-07-08 03:53:47 | INFO     | app.core.logging:setup_logging:82 - Logging initialized for exlm - Domain-Specific LLM Automation Platform
+2025-07-08 03:53:47 | INFO     | app.main:lifespan:24 - Starting exlm - Domain-Specific LLM Automation Platform v0.1.0
+2025-07-08 03:53:47 | INFO     | app.main:lifespan:26 - Metrics collection started
+2025-07-08 03:53:48 | INFO     | uvicorn.lifespan.on:startup:60 - Application startup complete.
+2025-07-08 03:53:48 | INFO     | uvicorn.lifespan.on:startup:60 - Application startup complete.
+2025-07-08 03:53:48 | INFO     | app.middleware.logging:dispatch:19 - Request started: GET /metrics
+2025-07-08 03:53:48 | ERROR    | app.middleware.error_handler:http_exception_handler:12 - HTTP Exception: Not Found
+2025-07-08 03:53:48 | INFO     | app.middleware.logging:dispatch:39 - Request completed: GET /metrics - 404
+2025-07-08 03:53:48 | INFO     | uvicorn.protocols.http.httptools_impl:send:496 - 172.18.0.11:52306 - "GET /metrics HTTP/1.1" 404
+2025-07-08 03:54:01 | INFO     | app.middleware.logging:dispatch:19 - Request started: GET /metrics
+2025-07-08 03:54:01 | ERROR    | app.middleware.error_handler:http_exception_handler:12 - HTTP Exception: Not Found
+2025-07-08 03:54:01 | INFO     | app.middleware.logging:dispatch:39 - Request completed: GET /metrics - 404
+2025-07-08 03:54:01 | INFO     | uvicorn.protocols.http.httptools_impl:send:496 - 172.18.0.11:58298 - "GET /metrics HTTP/1.1" 404
+2025-07-08 03:54:16 | INFO     | app.middleware.logging:dispatch:19 - Request started: GET /metrics
+2025-07-08 03:54:16 | ERROR    | app.middleware.error_handler:http_exception_handler:12 - HTTP Exception: Not Found
+2025-07-08 03:54:16 | INFO     | app.middleware.logging:dispatch:39 - Request completed: GET /metrics - 404
+2025-07-08 03:54:16 | INFO     | uvicorn.protocols.http.httptools_impl:send:496 - 172.18.0.11:37992 - "GET /metrics HTTP/1.1" 404
+2025-07-08 03:55:39 | INFO     | app.middleware.logging:dispatch:19 - Request started: GET /metrics
+2025-07-08 03:55:40 | ERROR    | app.middleware.error_handler:http_exception_handler:12 - HTTP Exception: Not Found
+2025-07-08 03:55:40 | INFO     | app.middleware.logging:dispatch:39 - Request completed: GET /metrics - 404
+2025-07-08 03:55:40 | INFO     | uvicorn.protocols.http.httptools_impl:send:496 - 172.18.0.11:53288 - "GET /metrics HTTP/1.1" 404
+2025-07-08 03:55:46 | INFO     | app.middleware.logging:dispatch:19 - Request started: GET /metrics
+2025-07-08 03:55:46 | ERROR    | app.middleware.error_handler:http_exception_handler:12 - HTTP Exception: Not Found
+2025-07-08 03:55:46 | INFO     | app.middleware.logging:dispatch:39 - Request completed: GET /metrics - 404
+2025-07-08 03:55:46 | INFO     | uvicorn.protocols.http.httptools_impl:send:496 - 172.18.0.11:59812 - "GET /metrics HTTP/1.1" 404
+2025-07-08 03:56:01 | INFO     | app.middleware.logging:dispatch:19 - Request started: GET /metrics
+2025-07-08 03:56:01 | ERROR    | app.middleware.error_handler:http_exception_handler:12 - HTTP Exception: Not Found
+2025-07-08 03:56:01 | INFO     | app.middleware.logging:dispatch:39 - Request completed: GET /metrics - 404
+2025-07-08 03:56:01 | INFO     | uvicorn.protocols.http.httptools_impl:send:496 - 172.18.0.11:57990 - "GET /metrics HTTP/1.1" 404
+2025-07-08 03:56:16 | INFO     | app.middleware.logging:dispatch:19 - Request started: GET /metrics
+2025-07-08 03:56:16 | ERROR    | app.middleware.error_handler:http_exception_handler:12 - HTTP Exception: Not Found
+2025-07-08 03:56:16 | INFO     | app.middleware.logging:dispatch:39 - Request completed: GET /metrics - 404
+2025-07-08 03:56:16 | INFO     | uvicorn.protocols.http.httptools_impl:send:496 - 172.18.0.11:56242 - "GET /metrics HTTP/1.1" 404
+2025-07-08 03:56:31 | INFO     | app.middleware.logging:dispatch:19 - Request started: GET /metrics
+2025-07-08 03:56:31 | ERROR    | app.middleware.error_handler:http_exception_handler:12 - HTTP Exception: Not Found
+2025-07-08 03:56:31 | INFO     | app.middleware.logging:dispatch:39 - Request completed: GET /metrics - 404
+2025-07-08 03:56:31 | INFO     | uvicorn.protocols.http.httptools_impl:send:496 - 172.18.0.11:37148 - "GET /metrics HTTP/1.1" 404
+2025-07-08 03:56:46 | INFO     | app.middleware.logging:dispatch:19 - Request started: GET /metrics
+2025-07-08 03:56:46 | ERROR    | app.middleware.error_handler:http_exception_handler:12 - HTTP Exception: Not Found
+2025-07-08 03:56:46 | INFO     | app.middleware.logging:dispatch:39 - Request completed: GET /metrics - 404
+2025-07-08 03:56:46 | INFO     | uvicorn.protocols.http.httptools_impl:send:496 - 172.18.0.11:46712 - "GET /metrics HTTP/1.1" 404
+2025-07-08 03:57:01 | INFO     | app.middleware.logging:dispatch:19 - Request started: GET /metrics
+2025-07-08 03:57:01 | ERROR    | app.middleware.error_handler:http_exception_handler:12 - HTTP Exception: Not Found
+2025-07-08 03:57:01 | INFO     | app.middleware.logging:dispatch:39 - Request completed: GET /metrics - 404
+2025-07-08 03:57:01 | INFO     | uvicorn.protocols.http.httptools_impl:send:496 - 172.18.0.11:60040 - "GET /metrics HTTP/1.1" 404
+2025-07-08 03:57:16 | INFO     | app.middleware.logging:dispatch:19 - Request started: GET /metrics
+2025-07-08 03:57:16 | ERROR    | app.middleware.error_handler:http_exception_handler:12 - HTTP Exception: Not Found
+2025-07-08 03:57:16 | INFO     | app.middleware.logging:dispatch:39 - Request completed: GET /metrics - 404
+2025-07-08 03:57:16 | INFO     | uvicorn.protocols.http.httptools_impl:send:496 - 172.18.0.11:59498 - "GET /metrics HTTP/1.1" 404
+2025-07-08 03:57:31 | INFO     | app.middleware.logging:dispatch:19 - Request started: GET /metrics
+2025-07-08 03:57:31 | ERROR    | app.middleware.error_handler:http_exception_handler:12 - HTTP Exception: Not Found
+2025-07-08 03:57:31 | INFO     | app.middleware.logging:dispatch:39 - Request completed: GET /metrics - 404
+2025-07-08 03:57:31 | INFO     | uvicorn.protocols.http.httptools_impl:send:496 - 172.18.0.11:42364 - "GET /metrics HTTP/1.1" 404
+2025-07-08 03:57:46 | INFO     | app.middleware.logging:dispatch:19 - Request started: GET /metrics
+2025-07-08 03:57:46 | ERROR    | app.middleware.error_handler:http_exception_handler:12 - HTTP Exception: Not Found
+2025-07-08 03:57:46 | INFO     | app.middleware.logging:dispatch:39 - Request completed: GET /metrics - 404
+2025-07-08 03:57:46 | INFO     | uvicorn.protocols.http.httptools_impl:send:496 - 172.18.0.11:41688 - "GET /metrics HTTP/1.1" 404
+2025-07-08 03:58:05 | INFO     | app.core.logging:setup_logging:82 - Logging initialized for exlm - Domain-Specific LLM Automation Platform
+2025-07-08 03:58:05 | INFO     | app.main:lifespan:24 - Starting exlm - Domain-Specific LLM Automation Platform v0.1.0
+2025-07-08 03:58:05 | INFO     | app.main:lifespan:26 - Metrics collection started
+2025-07-08 03:58:06 | INFO     | uvicorn.lifespan.on:startup:60 - Application startup complete.
+2025-07-08 03:58:06 | INFO     | uvicorn.lifespan.on:startup:60 - Application startup complete.
+2025-07-08 03:58:08 | INFO     | app.core.prompt_template:register_template:55 - Registered prompt template: instruction_following
+2025-07-08 03:58:08 | INFO     | app.core.prompt_template:register_template:55 - Registered prompt template: qa_context
+2025-07-08 03:58:08 | INFO     | app.core.prompt_template:register_template:55 - Registered prompt template: chat_conversation
+2025-07-08 03:58:08 | INFO     | app.core.prompt_template:register_template:55 - Registered prompt template: code_generation
+2025-07-08 03:58:08 | INFO     | app.core.prompt_template:register_template:55 - Registered prompt template: summarization
+2025-07-08 03:58:15 | INFO     | app.middleware.logging:dispatch:19 - Request started: GET /
+2025-07-08 03:58:15 | INFO     | app.middleware.logging:dispatch:39 - Request completed: GET / - 200
+2025-07-08 03:58:15 | INFO     | uvicorn.protocols.http.httptools_impl:send:496 - 192.168.65.1:62793 - "GET / HTTP/1.1" 200
+2025-07-08 03:58:15 | INFO     | app.middleware.logging:dispatch:19 - Request started: GET /favicon.ico
+2025-07-08 03:58:15 | ERROR    | app.middleware.error_handler:http_exception_handler:12 - HTTP Exception: Not Found
+2025-07-08 03:58:15 | INFO     | app.middleware.logging:dispatch:39 - Request completed: GET /favicon.ico - 404
+2025-07-08 03:58:15 | INFO     | uvicorn.protocols.http.httptools_impl:send:496 - 192.168.65.1:62793 - "GET /favicon.ico HTTP/1.1" 404
+2025-07-08 03:58:16 | INFO     | app.middleware.logging:dispatch:19 - Request started: GET /metrics
+2025-07-08 03:58:16 | ERROR    | app.middleware.error_handler:http_exception_handler:12 - HTTP Exception: Not Found
+2025-07-08 03:58:16 | INFO     | app.middleware.logging:dispatch:39 - Request completed: GET /metrics - 404
+2025-07-08 03:58:16 | INFO     | uvicorn.protocols.http.httptools_impl:send:496 - 172.18.0.11:46808 - "GET /metrics HTTP/1.1" 404
+2025-07-08 03:58:31 | INFO     | app.middleware.logging:dispatch:19 - Request started: GET /metrics
+2025-07-08 03:58:31 | ERROR    | app.middleware.error_handler:http_exception_handler:12 - HTTP Exception: Not Found
+2025-07-08 03:58:31 | INFO     | app.middleware.logging:dispatch:39 - Request completed: GET /metrics - 404
+2025-07-08 03:58:31 | INFO     | uvicorn.protocols.http.httptools_impl:send:496 - 172.18.0.11:41786 - "GET /metrics HTTP/1.1" 404
+2025-07-08 03:58:35 | INFO     | app.middleware.logging:dispatch:19 - Request started: GET /
+2025-07-08 03:58:35 | INFO     | app.middleware.logging:dispatch:39 - Request completed: GET / - 200
+2025-07-08 03:58:35 | INFO     | uvicorn.protocols.http.httptools_impl:send:496 - 192.168.65.1:37746 - "GET / HTTP/1.1" 200
+2025-07-08 03:58:35 | INFO     | app.middleware.logging:dispatch:19 - Request started: GET /favicon.ico
+2025-07-08 03:58:35 | ERROR    | app.middleware.error_handler:http_exception_handler:12 - HTTP Exception: Not Found
+2025-07-08 03:58:35 | INFO     | app.middleware.logging:dispatch:39 - Request completed: GET /favicon.ico - 404
+2025-07-08 03:58:35 | INFO     | uvicorn.protocols.http.httptools_impl:send:496 - 192.168.65.1:37746 - "GET /favicon.ico HTTP/1.1" 404
+2025-07-08 03:58:46 | INFO     | app.middleware.logging:dispatch:19 - Request started: GET /metrics
+2025-07-08 03:58:46 | ERROR    | app.middleware.error_handler:http_exception_handler:12 - HTTP Exception: Not Found
+2025-07-08 03:58:46 | INFO     | app.middleware.logging:dispatch:39 - Request completed: GET /metrics - 404
+2025-07-08 03:58:46 | INFO     | uvicorn.protocols.http.httptools_impl:send:496 - 172.18.0.11:60816 - "GET /metrics HTTP/1.1" 404
+2025-07-08 03:58:50 | INFO     | app.middleware.logging:dispatch:19 - Request started: GET //metrics
+2025-07-08 03:58:50 | ERROR    | app.middleware.error_handler:http_exception_handler:12 - HTTP Exception: Not Found
+2025-07-08 03:58:50 | INFO     | app.middleware.logging:dispatch:39 - Request completed: GET //metrics - 404
+2025-07-08 03:58:50 | INFO     | uvicorn.protocols.http.httptools_impl:send:496 - 192.168.65.1:31758 - "GET //metrics HTTP/1.1" 404
+2025-07-08 03:59:01 | INFO     | app.middleware.logging:dispatch:19 - Request started: GET /metrics
+2025-07-08 03:59:01 | ERROR    | app.middleware.error_handler:http_exception_handler:12 - HTTP Exception: Not Found
+2025-07-08 03:59:01 | INFO     | app.middleware.logging:dispatch:39 - Request completed: GET /metrics - 404
+2025-07-08 03:59:01 | INFO     | uvicorn.protocols.http.httptools_impl:send:496 - 172.18.0.11:56004 - "GET /metrics HTTP/1.1" 404
+2025-07-08 03:59:16 | INFO     | app.middleware.logging:dispatch:19 - Request started: GET /metrics
+2025-07-08 03:59:16 | ERROR    | app.middleware.error_handler:http_exception_handler:12 - HTTP Exception: Not Found
+2025-07-08 03:59:16 | INFO     | app.middleware.logging:dispatch:39 - Request completed: GET /metrics - 404
+2025-07-08 03:59:16 | INFO     | uvicorn.protocols.http.httptools_impl:send:496 - 172.18.0.11:54564 - "GET /metrics HTTP/1.1" 404

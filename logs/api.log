@@ -1,0 +1,161 @@
+2025-07-08 03:34:19 | INFO     | Request started: GET /metrics
+2025-07-08 03:34:19 | ERROR    | HTTP Exception: Not Found
+2025-07-08 03:34:19 | INFO     | Request completed: GET /metrics - 404
+2025-07-08 03:34:34 | INFO     | Request started: GET /metrics
+2025-07-08 03:34:34 | ERROR    | HTTP Exception: Not Found
+2025-07-08 03:34:34 | INFO     | Request completed: GET /metrics - 404
+2025-07-08 03:34:49 | INFO     | Request started: GET /metrics
+2025-07-08 03:34:49 | ERROR    | HTTP Exception: Not Found
+2025-07-08 03:34:49 | INFO     | Request completed: GET /metrics - 404
+2025-07-08 03:34:49 | INFO     | Request started: GET /api/v1/health
+2025-07-08 03:34:50 | INFO     | Request completed: GET /api/v1/health - 307
+2025-07-08 03:34:56 | INFO     | Request started: GET /api/v1/health/
+2025-07-08 03:34:56 | INFO     | Request completed: GET /api/v1/health/ - 200
+2025-07-08 03:35:04 | INFO     | Request started: GET /metrics
+2025-07-08 03:35:04 | ERROR    | HTTP Exception: Not Found
+2025-07-08 03:35:04 | INFO     | Request completed: GET /metrics - 404
+2025-07-08 03:35:19 | INFO     | Request started: GET /metrics
+2025-07-08 03:35:19 | ERROR    | HTTP Exception: Not Found
+2025-07-08 03:35:19 | INFO     | Request completed: GET /metrics - 404
+2025-07-08 03:35:34 | INFO     | Request started: GET /metrics
+2025-07-08 03:35:34 | ERROR    | HTTP Exception: Not Found
+2025-07-08 03:35:34 | INFO     | Request completed: GET /metrics - 404
+2025-07-08 03:35:49 | INFO     | Request started: GET /metrics
+2025-07-08 03:35:49 | ERROR    | HTTP Exception: Not Found
+2025-07-08 03:35:49 | INFO     | Request completed: GET /metrics - 404
+2025-07-08 03:36:04 | INFO     | Request started: GET /metrics
+2025-07-08 03:36:04 | ERROR    | HTTP Exception: Not Found
+2025-07-08 03:36:04 | INFO     | Request completed: GET /metrics - 404
+2025-07-08 03:36:19 | INFO     | Request started: GET /metrics
+2025-07-08 03:36:19 | ERROR    | HTTP Exception: Not Found
+2025-07-08 03:36:19 | INFO     | Request completed: GET /metrics - 404
+2025-07-08 03:36:34 | INFO     | Request started: GET /metrics
+2025-07-08 03:36:34 | ERROR    | HTTP Exception: Not Found
+2025-07-08 03:36:34 | INFO     | Request completed: GET /metrics - 404
+2025-07-08 03:36:50 | INFO     | Request started: GET /metrics
+2025-07-08 03:36:50 | ERROR    | HTTP Exception: Not Found
+2025-07-08 03:36:50 | INFO     | Request completed: GET /metrics - 404
+2025-07-08 03:37:04 | INFO     | Request started: GET /metrics
+2025-07-08 03:37:04 | ERROR    | HTTP Exception: Not Found
+2025-07-08 03:37:04 | INFO     | Request completed: GET /metrics - 404
+2025-07-08 03:37:19 | INFO     | Request started: GET /metrics
+2025-07-08 03:37:19 | ERROR    | HTTP Exception: Not Found
+2025-07-08 03:37:19 | INFO     | Request completed: GET /metrics - 404
+2025-07-08 03:37:34 | INFO     | Request started: GET /metrics
+2025-07-08 03:37:34 | ERROR    | HTTP Exception: Not Found
+2025-07-08 03:37:34 | INFO     | Request completed: GET /metrics - 404
+2025-07-08 03:37:49 | INFO     | Request started: GET /metrics
+2025-07-08 03:37:49 | ERROR    | HTTP Exception: Not Found
+2025-07-08 03:37:49 | INFO     | Request completed: GET /metrics - 404
+2025-07-08 03:38:05 | INFO     | Request started: GET /metrics
+2025-07-08 03:38:05 | ERROR    | HTTP Exception: Not Found
+2025-07-08 03:38:05 | INFO     | Request completed: GET /metrics - 404
+2025-07-08 03:38:19 | INFO     | Request started: GET /metrics
+2025-07-08 03:38:19 | ERROR    | HTTP Exception: Not Found
+2025-07-08 03:38:19 | INFO     | Request completed: GET /metrics - 404
+2025-07-08 03:38:35 | INFO     | Request started: GET /metrics
+2025-07-08 03:38:35 | ERROR    | HTTP Exception: Not Found
+2025-07-08 03:38:35 | INFO     | Request completed: GET /metrics - 404
+2025-07-08 03:38:49 | INFO     | Request started: GET /metrics
+2025-07-08 03:38:49 | ERROR    | HTTP Exception: Not Found
+2025-07-08 03:38:49 | INFO     | Request completed: GET /metrics - 404
+2025-07-08 03:39:04 | INFO     | Request started: GET /metrics
+2025-07-08 03:39:04 | ERROR    | HTTP Exception: Not Found
+2025-07-08 03:39:04 | INFO     | Request completed: GET /metrics - 404
+2025-07-08 03:39:19 | INFO     | Request started: GET /metrics
+2025-07-08 03:39:19 | ERROR    | HTTP Exception: Not Found
+2025-07-08 03:39:19 | INFO     | Request completed: GET /metrics - 404
+2025-07-08 03:39:34 | INFO     | Request started: GET /metrics
+2025-07-08 03:39:34 | ERROR    | HTTP Exception: Not Found
+2025-07-08 03:39:34 | INFO     | Request completed: GET /metrics - 404
+2025-07-08 03:39:43 | INFO     | Request started: GET /health
+2025-07-08 03:39:43 | ERROR    | HTTP Exception: Not Found
+2025-07-08 03:39:43 | INFO     | Request completed: GET /health - 404
+2025-07-08 03:39:49 | INFO     | Request started: GET /metrics
+2025-07-08 03:39:49 | ERROR    | HTTP Exception: Not Found
+2025-07-08 03:39:49 | INFO     | Request completed: GET /metrics - 404
+2025-07-08 03:39:52 | INFO     | Request started: GET /api/v1/health
+2025-07-08 03:39:52 | INFO     | Request completed: GET /api/v1/health - 307
+2025-07-08 03:40:02 | INFO     | Request started: GET /api/v1/health
+2025-07-08 03:40:02 | INFO     | Request completed: GET /api/v1/health - 307
+2025-07-08 03:40:02 | INFO     | Request started: GET /api/v1/health/
+2025-07-08 03:40:02 | INFO     | Request completed: GET /api/v1/health/ - 200
+2025-07-08 03:40:04 | INFO     | Request started: GET /metrics
+2025-07-08 03:40:04 | ERROR    | HTTP Exception: Not Found
+2025-07-08 03:40:04 | INFO     | Request completed: GET /metrics - 404
+2025-07-08 03:40:20 | INFO     | Request started: GET /metrics
+2025-07-08 03:40:20 | ERROR    | HTTP Exception: Not Found
+2025-07-08 03:40:20 | INFO     | Request completed: GET /metrics - 404
+2025-07-08 03:45:34 | INFO     | Request started: GET /metrics
+2025-07-08 03:45:34 | ERROR    | HTTP Exception: Not Found
+2025-07-08 03:45:34 | INFO     | Request completed: GET /metrics - 404
+2025-07-08 03:53:31 | INFO     | Request started: GET /metrics
+2025-07-08 03:53:31 | ERROR    | HTTP Exception: Not Found
+2025-07-08 03:53:31 | INFO     | Request completed: GET /metrics - 404
+2025-07-08 03:53:48 | INFO     | Request started: GET /metrics
+2025-07-08 03:53:48 | ERROR    | HTTP Exception: Not Found
+2025-07-08 03:53:48 | INFO     | Request completed: GET /metrics - 404
+2025-07-08 03:54:01 | INFO     | Request started: GET /metrics
+2025-07-08 03:54:01 | ERROR    | HTTP Exception: Not Found
+2025-07-08 03:54:01 | INFO     | Request completed: GET /metrics - 404
+2025-07-08 03:54:16 | INFO     | Request started: GET /metrics
+2025-07-08 03:54:16 | ERROR    | HTTP Exception: Not Found
+2025-07-08 03:54:16 | INFO     | Request completed: GET /metrics - 404
+2025-07-08 03:55:39 | INFO     | Request started: GET /metrics
+2025-07-08 03:55:40 | ERROR    | HTTP Exception: Not Found
+2025-07-08 03:55:40 | INFO     | Request completed: GET /metrics - 404
+2025-07-08 03:55:46 | INFO     | Request started: GET /metrics
+2025-07-08 03:55:46 | ERROR    | HTTP Exception: Not Found
+2025-07-08 03:55:46 | INFO     | Request completed: GET /metrics - 404
+2025-07-08 03:56:01 | INFO     | Request started: GET /metrics
+2025-07-08 03:56:01 | ERROR    | HTTP Exception: Not Found
+2025-07-08 03:56:01 | INFO     | Request completed: GET /metrics - 404
+2025-07-08 03:56:16 | INFO     | Request started: GET /metrics
+2025-07-08 03:56:16 | ERROR    | HTTP Exception: Not Found
+2025-07-08 03:56:16 | INFO     | Request completed: GET /metrics - 404
+2025-07-08 03:56:31 | INFO     | Request started: GET /metrics
+2025-07-08 03:56:31 | ERROR    | HTTP Exception: Not Found
+2025-07-08 03:56:31 | INFO     | Request completed: GET /metrics - 404
+2025-07-08 03:56:46 | INFO     | Request started: GET /metrics
+2025-07-08 03:56:46 | ERROR    | HTTP Exception: Not Found
+2025-07-08 03:56:46 | INFO     | Request completed: GET /metrics - 404
+2025-07-08 03:57:01 | INFO     | Request started: GET /metrics
+2025-07-08 03:57:01 | ERROR    | HTTP Exception: Not Found
+2025-07-08 03:57:01 | INFO     | Request completed: GET /metrics - 404
+2025-07-08 03:57:16 | INFO     | Request started: GET /metrics
+2025-07-08 03:57:16 | ERROR    | HTTP Exception: Not Found
+2025-07-08 03:57:16 | INFO     | Request completed: GET /metrics - 404
+2025-07-08 03:57:31 | INFO     | Request started: GET /metrics
+2025-07-08 03:57:31 | ERROR    | HTTP Exception: Not Found
+2025-07-08 03:57:31 | INFO     | Request completed: GET /metrics - 404
+2025-07-08 03:57:46 | INFO     | Request started: GET /metrics
+2025-07-08 03:57:46 | ERROR    | HTTP Exception: Not Found
+2025-07-08 03:57:46 | INFO     | Request completed: GET /metrics - 404
+2025-07-08 03:58:15 | INFO     | Request started: GET /
+2025-07-08 03:58:15 | INFO     | Request completed: GET / - 200
+2025-07-08 03:58:15 | INFO     | Request started: GET /favicon.ico
+2025-07-08 03:58:15 | ERROR    | HTTP Exception: Not Found
+2025-07-08 03:58:15 | INFO     | Request completed: GET /favicon.ico - 404
+2025-07-08 03:58:16 | INFO     | Request started: GET /metrics
+2025-07-08 03:58:16 | ERROR    | HTTP Exception: Not Found
+2025-07-08 03:58:16 | INFO     | Request completed: GET /metrics - 404
+2025-07-08 03:58:31 | INFO     | Request started: GET /metrics
+2025-07-08 03:58:31 | ERROR    | HTTP Exception: Not Found
+2025-07-08 03:58:31 | INFO     | Request completed: GET /metrics - 404
+2025-07-08 03:58:35 | INFO     | Request started: GET /
+2025-07-08 03:58:35 | INFO     | Request completed: GET / - 200
+2025-07-08 03:58:35 | INFO     | Request started: GET /favicon.ico
+2025-07-08 03:58:35 | ERROR    | HTTP Exception: Not Found
+2025-07-08 03:58:35 | INFO     | Request completed: GET /favicon.ico - 404
+2025-07-08 03:58:46 | INFO     | Request started: GET /metrics
+2025-07-08 03:58:46 | ERROR    | HTTP Exception: Not Found
+2025-07-08 03:58:46 | INFO     | Request completed: GET /metrics - 404
+2025-07-08 03:58:50 | INFO     | Request started: GET //metrics
+2025-07-08 03:58:50 | ERROR    | HTTP Exception: Not Found
+2025-07-08 03:58:50 | INFO     | Request completed: GET //metrics - 404
+2025-07-08 03:59:01 | INFO     | Request started: GET /metrics
+2025-07-08 03:59:01 | ERROR    | HTTP Exception: Not Found
+2025-07-08 03:59:01 | INFO     | Request completed: GET /metrics - 404
+2025-07-08 03:59:16 | INFO     | Request started: GET /metrics
+2025-07-08 03:59:16 | ERROR    | HTTP Exception: Not Found
+2025-07-08 03:59:16 | INFO     | Request completed: GET /metrics - 404

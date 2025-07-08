@@ -175,4 +175,4 @@ shell-backend-gpu: ## Open shell in GPU backend container
 
 shell-frontend-gpu: ## Open shell in GPU frontend container
 	@echo "Opening shell in GPU frontend container..."
-	docker-compose -f docker-compose.gpu.yml exec frontend bash 
+	docker-compose -f docker-compose.gpu.yml exec frontend bash
