@@ -240,7 +240,9 @@ chmod +x ../scripts/fix-dependencies.sh
 
 # 수동으로 해결하는 경우
 source venv/bin/activate
-pip uninstall -y transformers peft trl vllm accelerate
+pip uninstall -y transformers peft trl vllm accelerate pydantic fastapi openai anthropic
+pip install "pydantic>=1.10.13,<2.0.0"
+pip install "fastapi>=0.95.0,<0.105.0"
 pip install "transformers>=4.36.0,<4.38.0"
 pip install "vllm>=0.2.5,<0.3.0"
 pip install -r requirements-gpu.txt

@@ -57,7 +57,7 @@ fi
 
 # 기존 충돌 패키지 제거
 print_status "기존 충돌 패키지 제거 중..."
-pip uninstall -y transformers peft trl vllm accelerate datasets tokenizers bitsandbytes 2>/dev/null || true
+pip uninstall -y transformers peft trl vllm accelerate datasets tokenizers bitsandbytes pydantic fastapi openai anthropic 2>/dev/null || true
 
 # pip 업그레이드
 print_status "pip 업그레이드 중..."
@@ -71,6 +71,12 @@ if [ "$GPU_AVAILABLE" = true ]; then
     pip install torch==2.1.1 torchvision==0.16.1 torchaudio==2.1.1 --index-url https://download.pytorch.org/whl/cu118 -q
     
     # 핵심 라이브러리 단계별 설치
+    print_status "Pydantic 설치 중 (vLLM 호환 버전)..."
+    pip install "pydantic>=1.10.13,<2.0.0" -q
+    
+    print_status "FastAPI 설치 중..."
+    pip install "fastapi>=0.95.0,<0.105.0" -q
+    
     print_status "Transformers 라이브러리 설치 중..."
     pip install "transformers>=4.36.0,<4.38.0" -q
     
@@ -102,6 +108,12 @@ else
     print_status "CPU 환경 의존성 재설치 중..."
     
     # 핵심 라이브러리 단계별 설치
+    print_status "Pydantic 설치 중 (vLLM 호환 버전)..."
+    pip install "pydantic>=1.10.13,<2.0.0" -q
+    
+    print_status "FastAPI 설치 중..."
+    pip install "fastapi>=0.95.0,<0.105.0" -q
+    
     print_status "Transformers 라이브러리 설치 중..."
     pip install "transformers>=4.36.0,<4.38.0" -q
     
