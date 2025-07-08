@@ -72,10 +72,13 @@ if [ "$GPU_AVAILABLE" = true ]; then
     
     # 핵심 라이브러리 단계별 설치
     print_status "Pydantic 설치 중 (vLLM 호환 버전)..."
-    pip install "pydantic>=1.10.13,<2.0.0" -q
+    pip install "pydantic==1.10.13" -q
+    
+    print_status "Pydantic-settings 설치 중..."
+    pip install "pydantic-settings==1.2.2" -q
     
     print_status "FastAPI 설치 중..."
-    pip install "fastapi>=0.95.0,<0.105.0" -q
+    pip install "fastapi==0.100.1" -q
     
     print_status "Transformers 라이브러리 설치 중..."
     pip install "transformers>=4.36.0,<4.38.0" -q
@@ -109,10 +112,13 @@ else
     
     # 핵심 라이브러리 단계별 설치
     print_status "Pydantic 설치 중 (vLLM 호환 버전)..."
-    pip install "pydantic>=1.10.13,<2.0.0" -q
+    pip install "pydantic==1.10.13" -q
+    
+    print_status "Pydantic-settings 설치 중..."
+    pip install "pydantic-settings==1.2.2" -q
     
     print_status "FastAPI 설치 중..."
-    pip install "fastapi>=0.95.0,<0.105.0" -q
+    pip install "fastapi==0.100.1" -q
     
     print_status "Transformers 라이브러리 설치 중..."
     pip install "transformers>=4.36.0,<4.38.0" -q
