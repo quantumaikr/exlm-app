@@ -1,0 +1,40 @@
+# Project
+PROJECT_NAME="exlm - Domain-Specific LLM Automation Platform"
+VERSION="0.1.0"
+
+# Security
+SECRET_KEY="your-secret-key-here-change-in-production"
+ALGORITHM="HS256"
+ACCESS_TOKEN_EXPIRE_MINUTES=30
+
+# Database
+POSTGRES_SERVER=localhost
+POSTGRES_USER=postgres
+POSTGRES_PASSWORD=postgres
+POSTGRES_DB=exlm_db
+
+# Redis
+REDIS_URL=redis://localhost:6379/0
+
+# CORS (comma-separated URLs)
+BACKEND_CORS_ORIGINS=http://localhost:3000,http://localhost:8000
+
+# ML/AI API Keys
+OPENAI_API_KEY=
+ANTHROPIC_API_KEY=
+GOOGLE_API_KEY=
+
+# Hugging Face
+HF_TOKEN=
+
+# Monitoring
+WANDB_API_KEY=
+MLFLOW_TRACKING_URI=http://localhost:5000
+
+# Storage
+UPLOAD_DIR=./uploads
+MODEL_DIR=./models
+
+# Celery
+CELERY_BROKER_URL=redis://localhost:6379/1
+CELERY_RESULT_BACKEND=redis://localhost:6379/2
