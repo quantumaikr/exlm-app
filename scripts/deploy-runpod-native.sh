@@ -98,6 +98,13 @@ source venv/bin/activate
 # GPU 환경 확인 및 requirements 설치
 if command -v nvidia-smi &> /dev/null; then
     echo "✅ GPU 감지됨 - GPU requirements 설치"
+    
+    # PyTorch CUDA 버전 별도 설치
+    echo "🔥 PyTorch CUDA 버전 설치 중..."
+    pip install torch==2.1.1 torchvision==0.16.1 torchaudio==2.1.1 --index-url https://download.pytorch.org/whl/cu118
+    
+    # GPU requirements 설치 (torch는 이미 주석처리됨)
+    echo "📦 GPU requirements 설치 중..."
     pip install -r requirements-gpu.txt
 else
     echo "⚠️ GPU 미감지 - CPU requirements 설치"

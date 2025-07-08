@@ -104,7 +104,11 @@ python3.11 -m venv venv
 source venv/bin/activate
 
 # 의존성 설치 (GPU 환경)
+# PyTorch CUDA 버전 먼저 설치
+pip install torch==2.1.1 torchvision==0.16.1 torchaudio==2.1.1 --index-url https://download.pytorch.org/whl/cu118
+# 나머지 GPU requirements 설치
 pip install -r requirements-gpu.txt
+
 # 또는 CPU 환경
 # pip install -r requirements.txt
 
