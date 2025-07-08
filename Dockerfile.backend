@@ -1,0 +1,40 @@
+FROM python:3.9-slim
+
+# Set environment variables
+ENV PYTHONUNBUFFERED=1
+ENV PYTHONDONTWRITEBYTECODE=1
+
+# Install system dependencies
+RUN apt-get update && apt-get install -y \
+    gcc \
+    g++ \
+    git \
+    curl \
+    && rm -rf /var/lib/apt/lists/*
+
+# Set work directory
+WORKDIR /app
+
+# Copy requirements files
+COPY backend/requirements.txt .
+COPY backend/requirements-gpu.txt .
+
+# Install Python dependencies based on environment
+ARG BUILD_ENV=dev
+RUN if [ "$BUILD_ENV" = "gpu" ]; then \
+        pip install --no-cache-dir -r requirements-gpu.txt; \
+    else \
+        pip install --no-cache-dir -r requirements.txt; \
+    fi
+
+# Copy backend code
+COPY backend/ .
+
+# Create necessary directories
+RUN mkdir -p /app/uploads /app/models /app/logs
+
+# Expose port
+EXPOSE 8000
+
+# Default command
+CMD ["uvicorn", "app.main:app", "--host", "0.0.0.0", "--port", "8000"]
