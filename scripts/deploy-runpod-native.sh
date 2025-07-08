@@ -7,15 +7,30 @@ set -e
 
 echo "🚀 EXLM Platform RunPod 네이티브 배포 시작..."
 
-# GitHub Personal Access Token 확인
+# GitHub Personal Access Token 확인 (선택사항)
 if [ -z "$1" ]; then
-    echo "❌ GitHub Personal Access Token이 필요합니다."
+    echo "⚠️ GitHub Personal Access Token이 제공되지 않았습니다."
+    echo "Public 저장소인 경우 토큰 없이도 진행 가능합니다."
+    echo ""
+    echo "GitHub Token이 필요한 경우:"
+    echo "1. GitHub → Settings → Developer settings → Personal access tokens"
+    echo "2. 'Generate new token' 클릭"
+    echo "3. 권한: repo, read:org 선택"
+    echo ""
     echo "사용법: ./deploy-runpod-native.sh YOUR_GITHUB_TOKEN"
-    exit 1
+    echo ""
+    read -p "토큰 없이 계속하시겠습니까? (y/N): " -n 1 -r
+    echo
+    if [[ ! $REPLY =~ ^[Yy]$ ]]; then
+        exit 1
+    fi
+    REPO_URL="https://github.com/quantumaikr/exlm-app.git"
+    echo "📥 Public 저장소로 클론을 시도합니다..."
+else
+    GITHUB_TOKEN=$1
+    REPO_URL="https://${GITHUB_TOKEN}@github.com/quantumaikr/exlm-app.git"
+    echo "📥 인증된 접근으로 저장소를 클론합니다..."
 fi
-
-GITHUB_TOKEN=$1
-REPO_URL="https://${GITHUB_TOKEN}@github.com/quantumaikr/exlm-app.git"
 
 # 시스템 업데이트
 echo "📦 시스템 업데이트 중..."
@@ -48,14 +63,29 @@ echo "📥 저장소 클론 중..."
 if [ -d "exlm-app" ]; then
     rm -rf exlm-app
 fi
-git clone $REPO_URL
-cd exlm-app
+
+# 저장소 클론 시도
+if git clone $REPO_URL; then
+    echo "✅ 저장소 클론 성공"
+    cd exlm-app
+else
+    echo "❌ 저장소 클론 실패"
+    echo "가능한 원인:"
+    echo "1. 저장소가 Private이고 토큰이 필요함"
+    echo "2. 토큰 권한이 부족함"
+    echo "3. 네트워크 연결 문제"
+    echo ""
+    echo "해결 방법:"
+    echo "1. GitHub Personal Access Token 생성"
+    echo "2. 스크립트 재실행: ./deploy-runpod-native.sh YOUR_TOKEN"
+    exit 1
+fi
 
 # 데이터베이스 설정
 echo "🗄️ 데이터베이스 설정 중..."
-sudo -u postgres psql -c "CREATE USER exlm_user WITH PASSWORD 'exlm_password';"
-sudo -u postgres psql -c "CREATE DATABASE exlm_db OWNER exlm_user;"
-sudo -u postgres psql -c "GRANT ALL PRIVILEGES ON DATABASE exlm_db TO exlm_user;"
+sudo -u postgres psql -c "CREATE USER exlm_user WITH PASSWORD 'exlm_password';" || echo "사용자가 이미 존재합니다."
+sudo -u postgres psql -c "CREATE DATABASE exlm_db OWNER exlm_user;" || echo "데이터베이스가 이미 존재합니다."
+sudo -u postgres psql -c "GRANT ALL PRIVILEGES ON DATABASE exlm_db TO exlm_user;" || echo "권한 설정 완료"
 
 # 백엔드 설정
 echo "⚙️ 백엔드 설정 중..."
@@ -147,6 +177,9 @@ EOF
 
 # 스크립트 실행 권한 부여
 chmod +x start-*.sh
+
+# 로그 디렉토리 생성
+mkdir -p logs
 
 # 서비스 시작
 echo "🚀 서비스 시작 중..."
